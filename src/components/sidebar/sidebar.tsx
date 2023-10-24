@@ -33,7 +33,7 @@ export default function TemporaryDrawer({ state, setState, toggleDrawer }:  Temp
       height={'100%'}
     >
       <List>
-        {['/', 'last-events'].map((text) => (
+        {['/', 'last-events'].map((text) => (    
           <ListItem sx={{ padding: '10px' }} key={text} disablePadding>
             <ListItemButton href={`/${text == '/' ? '' : 'last-events'}`}>
               <ListItemIcon sx={{ color: '#fff' }}>
@@ -45,19 +45,7 @@ export default function TemporaryDrawer({ state, setState, toggleDrawer }:  Temp
           </ListItem>
         ))}
       </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon sx={{ color: '#fff' }}>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      
     </Box>
   );
 
