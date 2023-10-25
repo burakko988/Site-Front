@@ -7,25 +7,33 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import TemporaryDrawer from '../sidebar/sidebar';
+import FilterComponent from '../Filter/filter';
 
+interface ButtonAppBarProps {
+  showOnHome: boolean;
+}
 
-export default function ButtonAppBar() {
+ export const ButtonAppBar:React.FC<ButtonAppBarProps> = ({showOnHome}) =>{
+
   const [state, setState] = React.useState({
     top: false,
     left: false,
     bottom: false,
     right: false,
   });
-
+  // const [showHome, setShowHome] = React.useState(true)
   const toggleDrawer = (anchor: any, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (event.type === 'keydown' && ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
-
+  
   return (
+    <>
+    {showOnHome && (
+        <FilterComponent/>
+      )}
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ bgcolor: "#331D2C", padding: '15px' }}>
         <Toolbar>
@@ -40,5 +48,6 @@ export default function ButtonAppBar() {
       </AppBar>
       <TemporaryDrawer state={state} setState={setState} toggleDrawer={toggleDrawer} />
     </Box>
+    </>
   );
 }

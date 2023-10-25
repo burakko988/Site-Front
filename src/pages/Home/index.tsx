@@ -1,9 +1,12 @@
-import React from 'react'
 import Events from '../../components/Home/events/events';
+// import SearchBar from '../../components/Home/Search/search';
+import ImageCarousel from '../../components/Home/Slider/slider';
+
 
 const Home = () => {
   return (
-    <div>
+    <div style={{justifyContent:"center",display:"flex", flexDirection:"column"}}>
+      <ImageCarousel/>
       <h1>HOME</h1>
       <Events />
     </div>
