@@ -8,6 +8,7 @@ const EventList = () => {
       {mockData.map((event, index) => (
         <EventCard
           key={index}
+          id={event.id}
           resimUrl={event.resimUrl}
           etkinlikAdi={event.etkinlikAdi}
           etkinlikYeri={event.etkinlikYeri}

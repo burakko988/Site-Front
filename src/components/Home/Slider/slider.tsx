@@ -1,51 +1,43 @@
-import {  Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
+import mockData from '../../../mock/mockData';
+import { EventCardProps } from '../../Event/eventCard';
+import { Link } from 'react-router-dom';
 
 const ImageCarousel = () => {
 
-  const images = [
-   {item: {
-      url: 'https://picsum.photos/id/235/500/600',
-      caption: 'Resim 1',
-    }},
-    {item: {
-        url: 'https://picsum.photos/id/265/500/600',
-        caption: 'Resim 1',
-      }},
-      {item: {
-        url: 'https://picsum.photos/id/215/500/600',
-        caption: 'Resim 1',
-      }},
-    // Diğer resimler...
-  ];
+
+  let four: EventCardProps[] = []
+  for (let i = 0; i < 4; i++) {
+    four.push(mockData[i])
+  }
   return (
     <Carousel
-    animation="slide"
-    stopAutoPlayOnHover={false}
-    sx={{height:"500px",width:"100%",zIndex:0}}
-  >
-    {images.map((item, index) => (
-      <Paper key={index} elevation={3} sx={{ borderRadius: '10px' }}>
-        {/*TODO: When event page done path added here.... */}
-        {/* <Link to={item.item.caption}> */}
-
-        <div
-          style={{
-            backgroundImage: `url(${item.item.url})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '500px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-          }
-        }
-        >
-        </div>
-          {/* </Link> */}
-      </Paper>
-    ))}
-  </Carousel>
+      animation="slide"
+      stopAutoPlayOnHover={false}
+      sx={{ height: "500px", width: "100%", zIndex: 0 }}
+    >
+      {four.map((item, index) => (
+        <Paper key={index} elevation={3} sx={{ borderRadius: '10px' }}>
+          {/*TODO: When event page done path added here.... */}
+          <Link to={item.etkinlikAdi}>
+            <div
+              style={{
+                backgroundImage: `url(${item.resimUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '500px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+              }
+              }
+            >
+            </div>
+          </Link>
+        </Paper>
+      ))}
+    </Carousel>
   );
 };
 
