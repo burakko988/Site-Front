@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import mockData from '../../mock/mockData'
+import { useLocation, useParams } from 'react-router-dom'
+import { EventCardProps } from '../Event/eventCard'
 
 const EventDetailsComp = () => {
+
+  const { state } = useLocation()
+  const [event, setevent] = useState<EventCardProps>()
+
+  useEffect(() => {
+    getSingleEvent()
+  }, [])
+
+
+  const getSingleEvent = () => {
+    const resp = mockData.find((q) => state === q.id)
+    setevent(resp)
+  }
+
+
   return (
-    <h1>Event Details</h1>
+    <>
+      <div>
+        <h1> {event?.etkinlikAdi}</h1>
+        <h1> {event?.etkinlikTarihi}</h1>
+        <h1> {event?.etkinlikUcreti}</h1>
+        <h1> {event?.etkinlikAdi}</h1>
+      </div>
+      {/* <p>User ID: {id}</p> */}
+    </>
   )
 }
 

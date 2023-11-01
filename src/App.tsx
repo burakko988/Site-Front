@@ -14,8 +14,8 @@ function App() {
         <ButtonAppBar showOnHome={showOnHome} />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/event-details' element={<EventDetails />} />
-          <Route path='/last-events' element={<LastEvents />} />
+          <Route path='/event-details/:eventName' element={<EventDetails />} />
+          {/* <Route path='/last-events' element={<LastEvents />} /> */}
         </Routes>
       </div>
     </Router>
