@@ -1,6 +1,5 @@
 import Home from './pages/Home';
 import EventDetails from './pages/EventDetails';
-import LastEvents from './pages/LastEvents';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ButtonAppBar } from './components/navbar/navbar';

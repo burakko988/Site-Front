@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import mockData from '../../mock/mockData'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { EventCardProps } from '../Event/eventCard'
 
 const EventDetailsComp = () => {

@@ -119,7 +119,6 @@ const mockData = [
     etkinlikTarihi: '21 Ağustos 2023',
     etkinlikUcreti: '70 TL',
   },
- 
 ];
 
 export default mockData;
