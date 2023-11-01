@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Events = () => {
+const Navbar = () => {
+  const categories = ['Concert', 'Theatre', 'Festival', 'Stand up', 'Kids activities', 'Blog'];
+
   return (
-    <h2>Events</h2>
-  )
-}
+    <nav >
+      <ul className="category-home">
+        {categories.map((category, index) => (
+          <li key={index}>
+            <a href="#">{category}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default Events;
+export default Navbar;
