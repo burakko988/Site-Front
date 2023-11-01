@@ -1,3 +1,46 @@
-body {
-  margin: 0;
+/*event card page*/
+.card-component {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.card-component:hover {
+  transform: translateY(-30px);
+}
+
+/*events page*/
+.category-home {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+
+}
+
+.category-home li {
+  flex: 1;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  transition: border 0.3s;
+  width: 120px;
+}
+
+.category-home li:hover {
+  border: 7px solid #56c596;
+}
+
+.category-home li a {
+  text-decoration: none;
+  color: #56c596;
+  font-size: 20px;
+  font-weight: bold;
+ 
 }
