@@ -1,4 +1,3 @@
-
 import { Card, CardMedia, CardContent, Typography, Grid, Box } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EventIcon from '@mui/icons-material/Event';
@@ -16,8 +15,8 @@ function EventCard({ id, resimUrl, etkinlikAdi, etkinlikYeri, etkinlikTarihi, et
   return (
     <div className="card-component">
       <Link to={`event-details/${etkinlikAdi}`} state={id}>
-        <Card style={{ maxWidth: 300, borderRadius: '20px' }}>
-          <CardMedia component="img" height="200" image={resimUrl} alt="Etkinlik Resmi" />
+        <Card style={{ width: 600, borderRadius: '20px' }}>
+          <CardMedia component="img" height="300" image={resimUrl} alt="Etkinlik Resmi" />
           <CardContent>
             <Typography variant="h5" component="div">
               {etkinlikAdi}
@@ -49,9 +48,9 @@ function EventCard({ id, resimUrl, etkinlikAdi, etkinlikYeri, etkinlikTarihi, et
                 borderRadius: '8px',
                 padding: '8px',
                 display: 'inline-block',
-                width: '260px',
+                width: '97%',
                 marginTop: '16px',
-                backgroundColor: '#56C596'
+                backgroundColor: '#56C596',
               }}
             >
               Bilet Fiyatı: <span>{etkinlikUcreti}</span>

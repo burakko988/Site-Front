@@ -1,7 +1,7 @@
 const mockData = [
   {
     id: 1,
-    resimUrl: 'https://picsum.photos/200/300?random=1',
+    resimUrl: 'https://picsum.photos/600/300?random=1',
     etkinlikAdi: 'Konser 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
@@ -9,7 +9,7 @@ const mockData = [
   },
   {
     id: 2,
-    resimUrl: 'https://picsum.photos/200/300?random=2',
+    resimUrl: 'https://picsum.photos/600/300?random=2',
     etkinlikAdi: 'Yaz Festivali',
     etkinlikYeri: 'İstanbul Kültür Parkı',
     etkinlikTarihi: '10 Temmuz 2023',
@@ -17,7 +17,7 @@ const mockData = [
   },
   {
     id: 3,
-    resimUrl: 'https://picsum.photos/200/300?random=3',
+    resimUrl: 'https://picsum.photos/600/300?random=3',
     etkinlikAdi: 'Tiyatro Gösterisi',
     etkinlikYeri: 'Bursa Tiyatro Salonu',
     etkinlikTarihi: '21 Ağustos 2023',
@@ -25,7 +25,7 @@ const mockData = [
   },
   {
     id: 4,
-    resimUrl: 'https://picsum.photos/200/300?random=4',
+    resimUrl: 'https://picsum.photos/600/300?random=4',
     etkinlikAdi: 'Sanat Sergisi',
     etkinlikYeri: 'Antalya Sanat Galerisi',
     etkinlikTarihi: '15 Ekim 2023',
@@ -33,7 +33,7 @@ const mockData = [
   },
   {
     id: 5,
-    resimUrl: 'https://picsum.photos/200/300?random=5',
+    resimUrl: 'https://picsum.photos/600/300?random=5',
     etkinlikAdi: 'Konser 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
@@ -41,7 +41,7 @@ const mockData = [
   },
   {
     id: 6,
-    resimUrl: 'https://picsum.photos/200/300?random=6',
+    resimUrl: 'https://picsum.photos/600/300?random=6',
     etkinlikAdi: 'Yaz Festivali',
     etkinlikYeri: 'İstanbul Kültür Parkı',
     etkinlikTarihi: '10 Temmuz 2023',
@@ -49,7 +49,7 @@ const mockData = [
   },
   {
     id: 7,
-    resimUrl: 'https://picsum.photos/200/300?random=7',
+    resimUrl: 'https://picsum.photos/600/300?random=7',
     etkinlikAdi: 'Tiyatro Gösterisi',
     etkinlikYeri: 'Bursa Tiyatro Salonu',
     etkinlikTarihi: '21 Ağustos 2023',
@@ -57,7 +57,7 @@ const mockData = [
   },
   {
     id: 8,
-    resimUrl: 'https://picsum.photos/200/300?random=8',
+    resimUrl: 'https://picsum.photos/600/300?random=8',
     etkinlikAdi: 'Sanat Sergisi',
     etkinlikYeri: 'Antalya Sanat Galerisi',
     etkinlikTarihi: '15 Ekim 2023',
@@ -65,7 +65,7 @@ const mockData = [
   },
   {
     id: 9,
-    resimUrl: 'https://picsum.photos/200/300?random=9',
+    resimUrl: 'https://picsum.photos/600/300?random=9',
     etkinlikAdi: 'Konser 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
@@ -73,7 +73,7 @@ const mockData = [
   },
   {
     id: 10,
-    resimUrl: 'https://picsum.photos/200/300?random=10',
+    resimUrl: 'https://picsum.photos/600/300?random=10',
     etkinlikAdi: 'Yaz Festivali',
     etkinlikYeri: 'İstanbul Kültür Parkı',
     etkinlikTarihi: '10 Temmuz 2023',
@@ -81,7 +81,7 @@ const mockData = [
   },
   {
     id: 11,
-    resimUrl: 'https://picsum.photos/200/300?random=11',
+    resimUrl: 'https://picsum.photos/600/300?random=11',
     etkinlikAdi: 'Tiyatro Gösterisi',
     etkinlikYeri: 'Bursa Tiyatro Salonu',
     etkinlikTarihi: '21 Ağustos 2023',
@@ -89,7 +89,7 @@ const mockData = [
   },
   {
     id: 12,
-    resimUrl: 'https://picsum.photos/200/300?random=12',
+    resimUrl: 'https://picsum.photos/600/300?random=12',
     etkinlikAdi: 'Sanat Sergisi',
     etkinlikYeri: 'Antalya Sanat Galerisi',
     etkinlikTarihi: '15 Ekim 2023',
@@ -97,7 +97,7 @@ const mockData = [
   },
   {
     id: 13,
-    resimUrl: 'https://picsum.photos/200/300?random=16',
+    resimUrl: 'https://picsum.photos/600/300?random=16',
     etkinlikAdi: 'Konser 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
@@ -105,7 +105,7 @@ const mockData = [
   },
   {
     id: 14,
-    resimUrl: 'https://picsum.photos/200/300?random=17',
+    resimUrl: 'https://picsum.photos/600/300?random=17',
     etkinlikAdi: 'Yaz Festivali',
     etkinlikYeri: 'İstanbul Kültür Parkı',
     etkinlikTarihi: '10 Temmuz 2023',
@@ -113,7 +113,7 @@ const mockData = [
   },
   {
     id: 15,
-    resimUrl: 'https://picsum.photos/200/300?random=18',
+    resimUrl: 'https://picsum.photos/600/300?random=18',
     etkinlikAdi: 'Tiyatro Gösterisi',
     etkinlikYeri: 'Bursa Tiyatro Salonu',
     etkinlikTarihi: '21 Ağustos 2023',
