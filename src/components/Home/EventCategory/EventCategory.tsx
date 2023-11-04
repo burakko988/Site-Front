@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Navbar = () => {
+const EventCategory = () => {
   const categories = ['Concert', 'Theatre', 'Festival', 'Stand up', 'Kids activities', 'Blog'];
 
   return (
-    <nav >
+    <nav>
       <ul className="category-home">
         {categories.map((category, index) => (
           <li key={index}>
@@ -16,4 +16,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default EventCategory;

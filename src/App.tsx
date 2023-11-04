@@ -2,15 +2,15 @@ import Home from './pages/Home';
 import EventDetails from './pages/EventDetails';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ButtonAppBar } from './components/navbar/navbar';
+import { Navbar } from './components/Navbar/Navbar';
 
 
 function App() {
-  const showOnHome = location.pathname === "/";
+  
   return (
     <Router>
       <div>
-        <ButtonAppBar showOnHome={showOnHome} />
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/event-details/:eventName' element={<EventDetails />} />
