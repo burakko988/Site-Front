@@ -9,6 +9,7 @@ export interface DynamicEventCardProps {
     _id: string;
     imageUrl: string;
     title: string;
+    images: string;
     location: string;
     startDate: Date;
     endDate: Date;
@@ -25,17 +26,17 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
   return (
     <div className="card-component">
       <Link to={`event-details/${title}`} state={_id}>
-        <Card style={{ maxWidth: 300, borderRadius: '20px' }}>
-          <CardMedia component="img" height="200" image={event.imageUrl} alt="Event Image" />
+        <Card className="card-component">
+          <CardMedia component="img" height="200" image={event.images[0]} alt="Event Image" />
           <CardContent>
-            <Typography variant="h5" component="div">
+            <Typography className="truncate-2" variant="h5" component="div">
               {event.title}
             </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Box display="flex" alignItems="center">
                   <LocationOnIcon color="primary" style={{ marginRight: 8 }} />
-                  <Typography variant="body2" color="textSecondary" component="span">
+                  <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
                     {event.location}
                   </Typography>
                 </Box>
@@ -43,12 +44,12 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
               <Grid item xs={12}>
                 <Box display="flex" alignItems="center">
                   <EventIcon color="primary" style={{ marginRight: 8 }} />
-                  <Typography variant="body2" color="textSecondary" component="span">
+                  <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
                     <h4>{formattedDate}</h4>
                   </Typography>
 
                   {formattedEndDate && <EventIcon color="primary" style={{ marginRight: 8 }} />}
-                  <Typography variant="body2" color="textSecondary" component="span">
+                  <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
                     <h4>{formattedEndDate}</h4>
                   </Typography>
                 </Box>

@@ -4,29 +4,36 @@
 }
 
 /*event card page*/
+
+.card-component > * {
+  text-decoration: none;
+}
+
 .card-component {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  transition: transform 0.3s;
+  border-radius: 20px;
+  border: 1px solid #fff;
 }
 
 .card-component:hover {
-  transform: translateY(-30px);
+  border-radius: 20px;
+  border: 1px solid #56c596;
 }
 
-/*events page*/
+/*Event Categories*/
 .category-home {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
 }
 
-.category-home li {
+.nav-link {
+  text-decoration: none;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   background-color: #fff;
   padding: 20px;
@@ -34,11 +41,17 @@
   border: 5px solid #fff;
   border-radius: 20px;
   transition: border 0.3s;
-  width: 120px;
+  width: 160px;
+  height: 100px;
   box-shadow: 0 3px 3px #00000026;
+  overflow: hidden; /* İçerik kutunun dışına taşarsa gizleyin */
 }
 
-.category-home li:hover {
+.active {
+  border: 5px solid #56c596;
+}
+
+.nav-link:hover {
   border: 5px solid #56c596;
 }
 
@@ -47,4 +60,21 @@
   color: #56c596;
   font-size: 20px;
   font-weight: bold;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Kaç satır gösterileceğini belirler */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.9em; /* Satır yüksekliğinin iki katı olmalıdır */
+  line-height: 1.5em; /* Satır yüksekliğini ayarlar */
+}
+
+.truncate-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }

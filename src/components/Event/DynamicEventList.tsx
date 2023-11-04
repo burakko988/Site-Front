@@ -2,10 +2,13 @@ import React from 'react';
 import DynamicEventCard from './DynamicEventCard';
 import { fetchEvents } from '../../services/eventService';
 import { useQuery } from 'react-query';
+import { useParams } from 'react-router-dom';
+import Grid from '@mui/material/Grid';
 
 const DynamicEventList: React.FC = () => {
+  const { category } = useParams();
   const { data, isLoading, isError } = useQuery('events', fetchEvents, {
-    staleTime: 3000,
+    staleTime: 0,
   });
 
   if (isLoading) {
@@ -19,12 +22,20 @@ const DynamicEventList: React.FC = () => {
   if (!data) {
     return null; // veya başka bir placeholder gösterebilirsiniz
   }
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', marginTop: '130px' }}>
-      {data.map((event: any) => (
-        <DynamicEventCard key={event._id} event={event} />
-      ))}
-    </div>
+    <>
+      <h1>{category}</h1>
+      <div>
+        <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
+          {data.map((event: any) => (
+            <Grid item xs={12} sm={6} md={3} lg={3} key={event._id} sx={{ padding: 2 }}>
+              <DynamicEventCard event={event} />
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+    </>
   );
 };
 
