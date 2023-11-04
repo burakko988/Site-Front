@@ -2,7 +2,7 @@ const mockData = [
   {
     id: 1,
     resimUrl: 'https://picsum.photos/600/300?random=1',
-    etkinlikAdi: 'Konser 2023',
+    etkinlikAdi: 'Sagopa Kajmer Konseri 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
     etkinlikUcreti: '150 TL',
@@ -34,7 +34,7 @@ const mockData = [
   {
     id: 5,
     resimUrl: 'https://picsum.photos/600/300?random=5',
-    etkinlikAdi: 'Konser 2023',
+    etkinlikAdi: 'Eminem Konseri 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
     etkinlikUcreti: '150 TL',
@@ -66,7 +66,7 @@ const mockData = [
   {
     id: 9,
     resimUrl: 'https://picsum.photos/600/300?random=9',
-    etkinlikAdi: 'Konser 2023',
+    etkinlikAdi: 'Mabel Matiz Konseri 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
     etkinlikUcreti: '150 TL',
@@ -98,7 +98,7 @@ const mockData = [
   {
     id: 13,
     resimUrl: 'https://picsum.photos/600/300?random=16',
-    etkinlikAdi: 'Konser 2023',
+    etkinlikAdi: 'Ceza Konseri 2023',
     etkinlikYeri: 'Ankara Açık Hava Sahnesi',
     etkinlikTarihi: '1 Ocak 2023',
     etkinlikUcreti: '150 TL',
