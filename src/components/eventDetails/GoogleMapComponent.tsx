@@ -17,7 +17,7 @@ const containerStyle = {
 
 const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({ coords }) => {
   return (
-    <LoadScript googleMapsApiKey="">
+    <LoadScript googleMapsApiKey="BURAYA API KEY GİR">
       <GoogleMap mapContainerStyle={containerStyle} center={coords} zoom={10}>
         <Marker position={coords} />
       </GoogleMap>

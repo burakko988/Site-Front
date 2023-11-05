@@ -25,13 +25,12 @@ const EventDetails = () => {
       <h1>Event Details</h1>
       {event ? (
         <div>
-          <GoogleMapComponent coords={event.coords} />
+          {event.coords && <GoogleMapComponent coords={event.coords} />}
+
           <h1>{id}</h1>
           <h2>{event.title}</h2>
           <p>{event.description}</p>
           <p>Location: {event.location}</p>
-          <p>{event.coords.lat}</p>
-          <p>{event.coords.lng}</p>
         </div>
       ) : (
         <p>No event found</p>
