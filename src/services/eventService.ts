@@ -16,3 +16,23 @@ export const fetchEvents = async () => {
     throw new Error(error.response.data.message || 'Network error occurred');
   }
 };
+
+export const fetchEventById = async (eventId: string) => {
+  try {
+    const response = await apiClient.get(`/publicEvent/${eventId}`);
+    console.log('Event Data: ', response.data);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data.message || 'Network error occurred');
+  }
+};
+
+export const fetchEventByCategory = async (category: string) => {
+  try {
+    const response = await apiClient.get(`/publicEvent/category/${category}`);
+    console.log('Event Data: ', response.data);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data.message || 'Network error occurred');
+  }
+};
