@@ -10,15 +10,16 @@ export default function ButtonSelect() {
     <Stack spacing={2} direction="row">
       <Button
         sx={{
-          borderRadius: '30px',
+          borderRadius: '35px',
           backgroundColor: '#205072',
           color: '#fff',
+          marginTop: '14px !important',
+          height: '70%',
           [theme.breakpoints.down('md')]: {
             display: 'flex',
-            right: '10%',
+            right: '20%',
             height: '70%',
-            width: '30%',
-            marginTop: '8px !important',
+            marginTop: '14px !important',
           },
         }}
         variant="contained"
