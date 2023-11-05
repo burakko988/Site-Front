@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DynamicEventCard from './DynamicEventCard';
 import { fetchEvents } from '../../services/eventService';
+import { fetchEventByCategory } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
+import { useLocation } from 'react-router-dom';
 
 const DynamicEventList: React.FC = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
   const { category } = useParams();
-  const { data, isLoading, isError } = useQuery('events', fetchEvents, {
-    staleTime: 0,
+
+  useEffect(() => {
+    console.log('pathname', pathname, 'category', category);
+  });
+
+  const queryKey = pathname === '/' ? ['events'] : ['events', category];
+  const queryFn = pathname === '/' ? fetchEvents : () => fetchEventByCategory(category!);
+
+  const { data, isLoading, isError } = useQuery(queryKey, queryFn, {
+    staleTime: 3000,
   });
 
   if (isLoading) {
