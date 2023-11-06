@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const EventCategories = () => {
   const categories = [
-    { name: 'Previous Events', path: '/category/previous-events' },
+    { name: 'Previous Events', path: '/previous-events' },
     { name: 'Concert', path: '/category/concert' },
     { name: 'Theater', path: '/category/theater' },
     { name: 'Festival', path: '/category/festival' },
