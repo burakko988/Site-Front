@@ -1,42 +1,11 @@
-import { useLocation } from 'react-router-dom';
-import { useQuery } from 'react-query';
-import { fetchEventById } from '../../services/eventService';
-import GoogleMapComponent from '../../components/eventDetails/GoogleMapComponent';
+import DynamicEventDetailsComp from '../../components/DynamicEventDetails/DynamicEventDetailsComp';
 
-const EventDetails = () => {
-  const location = useLocation();
-  const { id } = location.state || {};
-
-  const {
-    data: event,
-    isLoading,
-    error,
-  } = useQuery(['event', id], () => fetchEventById(id), {
-    // Eğer id undefined ise sorguyu pasif yapmak için
-    enabled: !!id,
-  });
-
-  if (isLoading) return <div>Loading...</div>;
-
-  if (error instanceof Error) return <div>An error has occurred: {error.message}</div>;
-
+const DynamicEventDetails = () => {
   return (
     <div>
-      <h1>Event Details</h1>
-      {event ? (
-        <div>
-          {event.coords && <GoogleMapComponent coords={event.coords} />}
-
-          <h1>{id}</h1>
-          <h2>{event.title}</h2>
-          <p>{event.description}</p>
-          <p>Location: {event.location}</p>
-        </div>
-      ) : (
-        <p>No event found</p>
-      )}
+     <DynamicEventDetailsComp />
     </div>
   );
 };
 
-export default EventDetails;
+export default DynamicEventDetails;
