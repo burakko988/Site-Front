@@ -11,8 +11,10 @@ interface GoogleMapComponentProps {
 }
 
 const containerStyle = {
-  width: '400px',
-  height: '400px',
+  maxWidth: '600px',
+  height: '600px',
+  borderRadius: '20px',
+  border: '8px ridge #01A3A4'
 };
 
 const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({ coords }) => {
