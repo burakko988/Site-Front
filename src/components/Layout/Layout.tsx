@@ -16,11 +16,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const isHomePage = location.pathname === '/';
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="sticky" sx={{ paddingTop: '15px', paddingBottom: '15px', backgroundColor: '#01a3a4' }}>
         <Container>
           <Toolbar>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Typography variant="h6" component="h1">
+              <Typography sx={{ fontSize: '24px' }} variant="h6" component="h1">
                 My Application
               </Typography>
             </Link>
