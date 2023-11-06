@@ -1,6 +1,7 @@
 import React from 'react'
 import Festival from '@mui/icons-material/Festival'
 import Favorite from '@mui/icons-material/Favorite'
+import { Link } from 'react-router-dom';
 
 interface Props {
   event: any;
@@ -15,13 +16,13 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
           <h1>{event?.title}</h1>
           <div className='eventContentIcon'>
             <Festival sx={{color: '#331D2C'}} /><p>{event?.title}</p>
-            <Festival sx={{color: '#331D2C'}} /><p>{event?.location}</p>
+            <Festival sx={{color: '#331D2C'}} /><Link to=''>{event?.place}</Link>
           </div>
         </div>
         <div className='eventContentDetail'>
           <h3>Etkinlik Detayı</h3>
-          <h3 style={{color: '#555'}}>{event?.title} / {event?.location}</h3>
-          <p><strong>{event?.title}</strong> {event?.location} Büyükşehir Belediyesi Sponsorluğunda şehrinize eğlence getiren yapım {event?.description} alanında sizlerle buluşuyor.</p>
+          <Link to='#' style={{color: '#555'}}>{event?.title} / {event?.place}</Link>
+          <p><strong>{event?.title}</strong> {event?.place} Büyükşehir Belediyesi Sponsorluğunda şehrinize eğlence getiren yapım {event?.description} alanında sizlerle buluşuyor.</p>
           <p>{event?.title}, maksimum eğlence için {event?.description} sahnesinde sizlerle olacak...</p>
         </div>
         <div className="eventContentList">
