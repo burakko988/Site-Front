@@ -3,6 +3,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EventIcon from '@mui/icons-material/Event';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
+import { toKebabCase } from '../../helpers/toKebabCase';
 
 export interface DynamicEventCardProps {
   event: {
@@ -20,12 +21,14 @@ export interface DynamicEventCardProps {
 function DynamicEventCard({ event }: DynamicEventCardProps) {
   const { _id, title } = event;
 
+  const kebabTitle = toKebabCase(title);
+
   const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD.MM.YYYY HH:mm') : '';
   const formattedEndDate = event.endDate && dayjs(event.endDate).isValid() ? dayjs(event.endDate).format('DD.MM.YYYY HH:mm') : '';
 
   return (
     <div className="card-component">
-      <Link to={`event-details/${title}`} state={_id}>
+      <Link to={`/event-details/${kebabTitle}`} state={{ id: _id }}>
         <Card className="card-component">
           <CardMedia component="img" height="180"  image={event.images[0]} alt="Event Image" />
           <CardContent>
