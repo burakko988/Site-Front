@@ -1,8 +1,9 @@
+import ImageCarousel from "../Home/Slider/slider"
 
 const SliderEventDetail = () => {
   return (
     <div className="eventDetailsContainer">
-      <section className='slider'></section>
+      <ImageCarousel />
     </div>
   )
 }
