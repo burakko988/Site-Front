@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
 import ImageCarousel from '../Home/Slider/slider'; // Yolunuzun doğru olduğundan emin olun
 import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';
-import { Navbar } from '../Navbar/navbar';
+// import { Navbar } from '../Navbar/navbar';
 import { Link } from 'react-router-dom';
 
 interface LayoutProps {
