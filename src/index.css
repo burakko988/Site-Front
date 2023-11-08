@@ -7,16 +7,17 @@
 
 .card-component > * {
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .card-component {
   border-radius: 20px;
-  border: 1px solid #fff;
+  border: 3px solid #fff;
 }
 
 .card-component:hover {
   border-radius: 20px;
-  border: 1px solid #56c596;
+  border: 3px solid #2ed87b;
 }
 
 /*Event Categories*/
@@ -48,16 +49,16 @@
 }
 
 .active {
-  border: 5px solid #56c596;
+  border: 5px solid #2ed87b;
 }
 
 .nav-link:hover {
-  border: 5px solid #56c596;
+  border: 5px solid #2ed87b;
 }
 
 .category-home li a {
   text-decoration: none;
-  color: #56c596;
+  color: #2ed87b;
   font-size: 20px;
   font-weight: bold;
 }
@@ -77,4 +78,97 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+}
+
+/* FOOTER ALANI */
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #2581c2;
+  color: white;
+}
+
+.fa-twitter {
+  background: #2581c2;
+  color: white;
+}
+.fa-youtube {
+  background: #2581c2;
+  color: white;
+}
+
+.fa-instagram {
+  background: #2581c2;
+  color: white;
+}
+
+h2 {
+  color: #2ed87b;
+}
+
+.hover-link:hover {
+  background-color: #2ed87b;
+  border-radius: 20px;
+}
+
+@media (max-width: 975px) {
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .grid-item {
+    flex: 1;
+    font-size: 15px !important;
+    width: 300px;
+  }
+
+  .fa {
+    font-size: 15px !important;
+  }
+
+  .round-icon {
+    border-radius: 10%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .hide-paragraph {
+    display: none;
+  }
+
+  .containerStyle {
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 120px;
+  }
+
+  .columnStyle {
+    font-size: 18px;
+    width: 300px;
+  }
+
+  .linkStyle {
+    font-size: 15px !important;
+  }
 }
