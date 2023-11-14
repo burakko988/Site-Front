@@ -94,6 +94,7 @@ main {
 #eventDetailsMain .eventContent .eventContentIcon {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
   margin-top: 15px;
 }
@@ -375,4 +376,12 @@ main {
   #eventDetailsMain .eventContent .eventContentList .btn button {
     padding: 8px;
   }
+}
+
+
+/* SHARE PAGE*/
+
+a {
+  text-decoration: none;
+  color:#000;
 }
