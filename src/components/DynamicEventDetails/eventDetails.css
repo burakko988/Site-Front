@@ -376,3 +376,11 @@ main {
     padding: 8px;
   }
 }
+
+
+/* SHARE PAGE*/
+
+a {
+  text-decoration: none;
+  color:#000;
+}
