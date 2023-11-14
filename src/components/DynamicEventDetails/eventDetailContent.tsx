@@ -14,13 +14,15 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
       <section className="eventContent">
         <div>
           <h1>{event?.title}</h1>
-          <div className="eventContentIcon">
-            <Festival sx={{ color: '#331D2C' }} />
-            <p>{event?.title}</p>
-            <Festival sx={{ color: '#331D2C' }} />
-            <Link to="">{event?.place}</Link>
 
-            <Share/>
+          <div className="eventContentIcon">
+            <div style={{ display: 'flex' }}>
+              <Festival sx={{ color: '#331D2C' }} />
+              <p>{event?.title}</p>
+              <Festival sx={{ color: '#331D2C', marginLeft: '20px' }} />
+              <Link to="">{event?.place}</Link>
+            </div>
+            <Share />
           </div>
         </div>
         <div className="eventContentDetail">

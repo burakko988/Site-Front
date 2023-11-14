@@ -25,7 +25,7 @@ export default function Share() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'flex-end', paddingLeft: '100px' }}>
+      <div>
         <Button
           variant="contained"
           onClick={handleClick}
