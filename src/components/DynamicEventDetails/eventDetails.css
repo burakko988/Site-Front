@@ -1,7 +1,6 @@
-
 /* MAIN */
 main {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 /* General Container */
@@ -39,13 +38,14 @@ main {
   cursor: pointer;
 }
 
-#eventDetailsNav input, #eventDetailsNav select {
+#eventDetailsNav input,
+#eventDetailsNav select {
   border-radius: 50px;
   border: 0;
   outline: 0;
   padding: 16px 20px;
   font-size: 20px;
-  box-shadow: 1px -5px 15px 15px #331D2C;
+  box-shadow: 1px -5px 15px 15px #331d2c;
 }
 
 /* Event Detail MAIN */
@@ -102,17 +102,17 @@ main {
 .eventContentIcon p {
   color: gray;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   font-size: 18px;
 }
 
 .eventContentIcon p:hover {
-  color: #331D2C;
+  color: #331d2c;
 }
 
 #eventDetailsMain .eventContent .eventContentDetail {
   margin-top: 40px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border-radius: 16px;
   padding: 20px 25px;
   display: flex;
@@ -147,7 +147,7 @@ main {
   text-align: center;
   margin-left: 4px;
   height: 25px;
-  background-color: #331D2C;
+  background-color: #331d2c;
   border-radius: 50px;
   color: #fcf;
 }
@@ -156,7 +156,7 @@ main {
   font-weight: 300;
   font-size: 18px;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 #eventDetailsMain .eventContent .eventContentList h4:hover {
@@ -173,22 +173,23 @@ main {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: #F85E3D;
+  background-color: #f85e3d;
   border: 0;
   padding: 10px 18px;
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 #eventDetailsMain .eventContent .eventContentList .btn button:hover {
-  color: #F85E3D;
+  color: #f85e3d;
   background-color: #f1f1f1;
 }
 
 /* TICKET DETAIL */
-.ticketDetail .listHead, .ticketDetail .listDetail {
+.ticketDetail .listHead,
+.ticketDetail .listDetail {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -196,12 +197,12 @@ main {
 
 .ticketDetail h2 {
   font-size: 27px;
-  color: #4B4B4B;
+  color: #4b4b4b;
 }
 
 .ticketDetail h3 {
   font-size: 24px;
-  color: #4B4B4B;
+  color: #4b4b4b;
 }
 
 .ticketDetail li {
@@ -216,9 +217,9 @@ main {
   margin-top: 20px;
   padding: 30px;
   border-radius: 15px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   position: relative;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .ticketDetail .listDetail:hover {
@@ -237,11 +238,11 @@ main {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #F85E3D;
+  background-color: #f85e3d;
   padding: 10px 15px;
   border-radius: 15px 0 15px 0;
   color: #f1f1f1;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .ticketDetail .listDetail .buyTicket:hover {
@@ -264,7 +265,7 @@ main {
 
 .eventRules ul li {
   margin-top: 10px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -291,14 +292,13 @@ main {
 }
 
 #eventDetailsMain .map h1 {
-  color: #4B4B4B;
+  color: #4b4b4b;
   font-style: italic;
   padding-top: 0;
   padding-bottom: 5px;
   text-shadow: 3px 6px 4px #f85e3d;
   font-size: 35px;
 }
-
 
 /* MEDIA QUERIES OF RESPONSIVE */
 
@@ -343,7 +343,7 @@ main {
   #eventDetailsMain .eventContent .eventContentList .btn {
     margin-left: 0;
   }
-  
+
   #eventDetailsMain .eventContent .eventContentList .btn button {
     padding: 6px 15px;
   }
@@ -351,12 +351,11 @@ main {
   .eventRules h2 {
     font-size: 24px;
   }
-  
+
   .eventRules ul {
     font-size: 17px;
   }
 }
-
 
 /* 576px */
 @media (max-width: 576px) {
@@ -378,10 +377,9 @@ main {
   }
 }
 
-
 /* SHARE PAGE*/
 
 a {
   text-decoration: none;
-  color:#000;
+  color: #000;
 }

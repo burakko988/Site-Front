@@ -6,6 +6,7 @@ import Layout from './components/Layout/Layout';
 import EventList from './components/Event/eventList';
 import DynamicEventList from './components/Event/DynamicEventList';
 import PreviousEvents from './pages/PreviousEvents/';
+import PlacePage from './pages/PlacePage';
 
 function App() {
   const showOnHome = location.pathname === '/';
@@ -18,6 +19,7 @@ function App() {
           {/* <Route path='/last-events' element={<LastEvents />} /> */}
           <Route path="/category/:category" element={<DynamicEventList />} />
           <Route path="/previous-events" element={<PreviousEvents />} />
+          <Route path="/place/:place" element={<PlacePage />} />
         </Routes>
       </Layout>
     </Router>
