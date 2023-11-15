@@ -5,8 +5,8 @@ import FilterBar from './FilterBar';
 export const Navbar = () => {
   return (
     <>
-      <TopBar />
-      <FilterBar />
+      {/* <TopBar />
+      <FilterBar /> */}
     </>
   );
 };

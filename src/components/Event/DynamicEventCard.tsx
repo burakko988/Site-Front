@@ -35,7 +35,7 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
     <div className="card-component">
       <Link to={`/event-details/${kebabTitle}`} state={{ id: _id }}>
         <Card className="card-component">
-          <CardMedia component="img" height="200" image={event.images[0]} alt="Event Image" />
+          <CardMedia component="img" height="180"  image={event.images[0]} alt="Event Image" />
           <CardContent>
             <Typography className="truncate-2" variant="h5" component="div">
               {event.title}
@@ -72,9 +72,9 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
                 borderRadius: '8px',
                 padding: '8px',
                 display: 'inline-block',
-                width: '260px',
+                width: '100%',
                 marginTop: '16px',
-                backgroundColor: '#56C596',
+                backgroundColor: '#2ED87B',
               }}
             >
               Ticket Price: <span>{event.ticketPrice}</span>

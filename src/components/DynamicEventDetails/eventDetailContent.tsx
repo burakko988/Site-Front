@@ -2,6 +2,7 @@ import React from 'react';
 import Festival from '@mui/icons-material/Festival';
 import Favorite from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
+import Share from './Share';
 import { toKebabCase } from '../../helpers/toKebabCase';
 import slugify from 'slugify';
 
@@ -15,11 +16,15 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
       <section className="eventContent">
         <div>
           <h1>{event?.title}</h1>
+
           <div className="eventContentIcon">
-            <Festival sx={{ color: '#331D2C' }} />
-            <p>{event?.title}</p>
-            <Festival sx={{ color: '#331D2C' }} />
-            <Link to={`/place/${slugify(event.place, { lower: true })}`}>{event?.place}</Link>
+            <div style={{ display: 'flex' }}>
+              <Festival sx={{ color: '#331D2C' }} />
+              <p>{event?.title}</p>
+              <Festival sx={{ color: '#331D2C', marginLeft: '20px' }} />
+              <Link to="">{event?.place}</Link>
+            </div>
+            <Share />
           </div>
         </div>
         <div className="eventContentDetail">
