@@ -3,7 +3,6 @@ import Festival from '@mui/icons-material/Festival';
 import Favorite from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
 import Share from './Share';
-import { toKebabCase } from '../../helpers/toKebabCase';
 import slugify from 'slugify';
 
 interface Props {
@@ -22,16 +21,13 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
               <Festival sx={{ color: '#331D2C' }} />
               <p>{event?.title}</p>
               <Festival sx={{ color: '#331D2C', marginLeft: '20px' }} />
-              <Link to="">{event?.place}</Link>
+              <Link to={`/place/${slugify(event.place, { lower: true })}`}>{event?.place}</Link>
             </div>
             <Share />
           </div>
         </div>
         <div className="eventContentDetail">
           <h3>Etkinlik Detayı</h3>
-          {/* <Link to="#" style={{ color: '#555' }}>
-            {event?.title} / {event?.place}
-          </Link> */}
           <p>
             <strong>{event?.title}</strong> {event?.place} Büyükşehir Belediyesi Sponsorluğunda şehrinize eğlence getiren yapım {event?.description} alanında sizlerle buluşuyor.
           </p>
