@@ -5,14 +5,14 @@
 
 /*event card page*/
 
+.card-component {
+  border-radius: 20px !important;
+  border: 3px solid #fff;
+}
+
 .card-component > * {
   text-decoration: none;
   border-radius: 20px;
-}
-
-.card-component {
-  border-radius: 20px;
-  border: 3px solid #fff;
 }
 
 .card-component:hover {
