@@ -5,7 +5,6 @@ interface Props {
 }
 
 const TicketDetailContent: React.FC<Props> = ({ event }) => {
-  
   return (
     <>
       <section className="ticketDetail eventContent">
@@ -16,11 +15,14 @@ const TicketDetailContent: React.FC<Props> = ({ event }) => {
         <div className="listDetail">
           <section>
             <h3>{event?.startDate.substring(0, 10)}</h3>
-            <p>{event?.location}</p>
+            <p>{event?.place}</p>
             <p>Kredi Kartlarına İndirim Avantajıyla</p>
           </section>
           <section>
-            <h3>{event?.ticketPrice}<span style={{ fontSize: '18px' }}>.00 ₺</span></h3>
+            <h3>
+              {event?.ticketPrice}
+              <span style={{ fontSize: '18px' }}>.00 ₺</span>
+            </h3>
             <span>
               <small>Başlayan Fiyatlar</small>
             </span>

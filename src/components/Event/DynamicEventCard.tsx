@@ -3,7 +3,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EventIcon from '@mui/icons-material/Event';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
+import 'dayjs/locale/tr';
+
 import { toKebabCase } from '../../helpers/toKebabCase';
+import slugify from 'slugify';
 
 export interface DynamicEventCardProps {
   event: {
@@ -11,7 +14,7 @@ export interface DynamicEventCardProps {
     imageUrl: string;
     title: string;
     images: string;
-    location: string;
+    place: string;
     startDate: Date;
     endDate: Date;
     ticketPrice: string;
@@ -21,9 +24,11 @@ export interface DynamicEventCardProps {
 function DynamicEventCard({ event }: DynamicEventCardProps) {
   const { _id, title } = event;
 
-  const kebabTitle = toKebabCase(title);
+  const kebabTitle = slugify(title);
 
-  const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD.MM.YYYY HH:mm') : '';
+  dayjs.locale('tr');
+
+  const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD MMMM dddd / HH:mm') : '';
   const formattedEndDate = event.endDate && dayjs(event.endDate).isValid() ? dayjs(event.endDate).format('DD.MM.YYYY HH:mm') : '';
 
   return (
@@ -40,7 +45,7 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
                 <Box display="flex" alignItems="center">
                   <LocationOnIcon color="primary" style={{ marginRight: 8 }} />
                   <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
-                    {event.location}
+                    {event.place}
                   </Typography>
                 </Box>
               </Grid>
