@@ -1,14 +1,12 @@
-import { useParams } from 'react-router-dom';
-import { fetchEventByPlace } from '../../services/eventService';
+import React from 'react';
+import DynamicEventCard from '../../components/Event/EventCard';
+import { fetchPreviousEvents } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
-import DynamicEventCard from '../../components/Event/EventCard';
 import { Helmet } from 'react-helmet';
 
-const index = () => {
-  const { place } = useParams();
-
-  const { data, isLoading, isError } = useQuery(['place', place], () => fetchEventByPlace(place!), {
+const DynamicEventList: React.FC = () => {
+  const { data, isLoading, isError } = useQuery('previousEvents', fetchPreviousEvents, {
     staleTime: 3000,
   });
 
@@ -23,13 +21,14 @@ const index = () => {
   if (!data) {
     return null;
   }
+
   return (
     <>
       <Helmet>
-        <title>{data[0].place}</title>
+        <title>Previos Events</title>
+        <meta name="description" content="Discover our events and get information about the latest activities." />
       </Helmet>
-
-      <h1>{place}</h1>
+      <h1>Previous Events</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
           {data.map((event: any) => (
@@ -43,4 +42,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default DynamicEventList;

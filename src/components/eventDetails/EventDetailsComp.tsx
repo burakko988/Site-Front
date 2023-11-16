@@ -8,6 +8,7 @@ import EventDetailContent from './EventDetailContent';
 import TicketDetailContent from './TicketDetailContent';
 import EventRules from './EventRules';
 import './eventDetails.css';
+import { Helmet } from 'react-helmet';
 
 const EventDetailsComp = () => {
   const location = useLocation();
@@ -28,6 +29,10 @@ const EventDetailsComp = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>{event.title}</title>
+        <meta name="description" content={event.description} />
+      </Helmet>
       {/* Slider Img */}
       <SliderEventDetail />
 
