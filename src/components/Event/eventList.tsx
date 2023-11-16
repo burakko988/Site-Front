@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import DynamicEventCard from './EventCard';
+import EventCard from './EventCard';
 import { fetchEvents } from '../../services/eventService';
 import { fetchEventByCategory } from '../../services/eventService';
 import { useQuery } from 'react-query';
@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { useLocation } from 'react-router-dom';
 
-const DynamicEventList: React.FC = () => {
+const EventList: React.FC = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const { category } = useParams();
@@ -42,7 +42,7 @@ const DynamicEventList: React.FC = () => {
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
           {data.map((event: any) => (
             <Grid item xs={12} sm={6} md={3} lg={3} key={event._id} sx={{ padding: 2 }}>
-              <DynamicEventCard event={event} />
+              <EventCard event={event} />
             </Grid>
           ))}
         </Grid>
@@ -51,4 +51,4 @@ const DynamicEventList: React.FC = () => {
   );
 };
 
-export default DynamicEventList;
+export default EventList;
