@@ -2,14 +2,14 @@ import { useLocation } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { fetchEventById } from '../../services/eventService';
 import GoogleMapComponent from './GoogleMapComponent';
-import SliderEventDetail from './detailSlider';
-import EventDetailImage from './eventDetailImage';
-import EventDetailContent from './eventDetailContent';
-import TicketDetailContent from './ticketDetailContent';
-import EventRules from './eventRules';
+import SliderEventDetail from './EventDetailSlider';
+import EventDetailImage from './EventDetailImage';
+import EventDetailContent from './EventDetailContent';
+import TicketDetailContent from './TicketDetailContent';
+import EventRules from './EventRules';
 import './eventDetails.css';
 
-const DynamicEventDetailsComp = () => {
+const EventDetailsComp = () => {
   const location = useLocation();
   const { id } = location.state || {};
 
@@ -49,16 +49,14 @@ const DynamicEventDetailsComp = () => {
             <EventRules />
 
             {/* MAPS */}
-            {
-              event.coords && (
-                <div className="eventContent">
-                  <div className="map">
-                    <h1>Location</h1>
-                    <GoogleMapComponent coords={event.coords} />
-                  </div>
+            {event.coords && (
+              <div className="eventContent">
+                <div className="map">
+                  <h1>Location</h1>
+                  <GoogleMapComponent coords={event.coords} />
                 </div>
-              )
-            }
+              </div>
+            )}
           </section>
         </div>
       </main>
@@ -66,4 +64,4 @@ const DynamicEventDetailsComp = () => {
   );
 };
 
-export default DynamicEventDetailsComp;
+export default EventDetailsComp;

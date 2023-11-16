@@ -1,41 +1,6 @@
-
-/* Slider */
-.slider {
-  max-width: 890px;
-  height: 400px;
-  margin: 40px auto 0 auto;
-  box-shadow: 1px 6px 6px #ccc;
-  border-radius: 20px;
-  animation-name: slide;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes slide {
-  0% {
-    background: url(https://picsum.photos/900/500?random=1) no-repeat center center;
-  }
-
-  25% {
-    background: url(https://picsum.photos/900/500?random=2) no-repeat center center;
-  }
-
-  50% {
-    background: url(https://picsum.photos/900/500?random=3) no-repeat center center;
-  }
-
-  75% {
-    background: url(https://picsum.photos/900/500?random=4) no-repeat center center;
-  }
-
-  100% {
-    background: url(https://picsum.photos/900/500?random=5) no-repeat center center;
-  }
-}
-
 /* MAIN */
 main {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 /* General Container */
@@ -73,13 +38,14 @@ main {
   cursor: pointer;
 }
 
-#eventDetailsNav input, #eventDetailsNav select {
+#eventDetailsNav input,
+#eventDetailsNav select {
   border-radius: 50px;
   border: 0;
   outline: 0;
   padding: 16px 20px;
   font-size: 20px;
-  box-shadow: 1px -5px 15px 15px #331D2C;
+  box-shadow: 1px -5px 15px 15px #331d2c;
 }
 
 /* Event Detail MAIN */
@@ -93,15 +59,18 @@ main {
 }
 
 /* Event Detail Image */
-#eventDetailsMain .imgEvent  {
+#eventDetailsMain .imgEvent {
   flex-grow: 1;
-  /* background-color: red; */
 }
 
 #eventDetailsMain .imgEvent img {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 97px;
   border-radius: 30px;
   max-width: 350px;
   height: 400px;
+  box-shadow: 1px 6px 6px #ccc;
 }
 
 #eventDetailsMain #ticket-event-detail {
@@ -125,6 +94,7 @@ main {
 #eventDetailsMain .eventContent .eventContentIcon {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
   margin-top: 15px;
 }
@@ -132,17 +102,17 @@ main {
 .eventContentIcon p {
   color: gray;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   font-size: 18px;
 }
 
 .eventContentIcon p:hover {
-  color: #331D2C;
+  color: #331d2c;
 }
 
 #eventDetailsMain .eventContent .eventContentDetail {
   margin-top: 40px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border-radius: 16px;
   padding: 20px 25px;
   display: flex;
@@ -159,20 +129,16 @@ main {
 #eventDetailsMain .eventContent .eventContentList {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 30px;
+  gap: 10px;
 }
 
 .eventContentList .hr {
+  display: inline-block;
   width: 3px;
   height: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
   background-color: #f1f1f1;
-}
-
-.eventContentList div {
-  /* display: inline-block; */
-  max-width: 115px;
 }
 
 .eventContentList div span {
@@ -181,7 +147,7 @@ main {
   text-align: center;
   margin-left: 4px;
   height: 25px;
-  background-color: #331D2C;
+  background-color: #331d2c;
   border-radius: 50px;
   color: #fcf;
 }
@@ -190,7 +156,7 @@ main {
   font-weight: 300;
   font-size: 18px;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 #eventDetailsMain .eventContent .eventContentList h4:hover {
@@ -198,8 +164,8 @@ main {
 }
 
 #eventDetailsMain .eventContent .eventContentList .btn {
-  margin-left: auto;
   max-width: 100%;
+  margin-left: auto;
 }
 
 #eventDetailsMain .eventContent .eventContentList .btn button {
@@ -207,34 +173,36 @@ main {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: #F85E3D;
+  background-color: #f85e3d;
   border: 0;
-  padding: 12px 25px;
+  padding: 10px 18px;
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 #eventDetailsMain .eventContent .eventContentList .btn button:hover {
-  color: #F85E3D;
+  color: #f85e3d;
   background-color: #f1f1f1;
 }
 
-.ticketDetail .listHead, .ticketDetail .listDetail {
+/* TICKET DETAIL */
+.ticketDetail .listHead,
+.ticketDetail .listDetail {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .ticketDetail h2 {
-  font-size: 30px;
-  color: #4B4B4B;
+  font-size: 27px;
+  color: #4b4b4b;
 }
 
 .ticketDetail h3 {
-  font-size: 27px;
-  color: #4B4B4B;
+  font-size: 24px;
+  color: #4b4b4b;
 }
 
 .ticketDetail li {
@@ -249,9 +217,9 @@ main {
   margin-top: 20px;
   padding: 30px;
   border-radius: 15px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   position: relative;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .ticketDetail .listDetail:hover {
@@ -270,11 +238,11 @@ main {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #F85E3D;
+  background-color: #f85e3d;
   padding: 10px 15px;
   border-radius: 15px 0 15px 0;
   color: #f1f1f1;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .ticketDetail .listDetail .buyTicket:hover {
@@ -282,6 +250,7 @@ main {
   background-color: #f1f1f1;
 }
 
+/* EVENT RULES */
 .eventRules h2 {
   font-weight: bold;
   font-size: 28px;
@@ -296,7 +265,7 @@ main {
 
 .eventRules ul li {
   margin-top: 10px;
-  color: #4B4B4B;
+  color: #4b4b4b;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -314,3 +283,103 @@ main {
   padding-bottom: 10px;
 }
 
+.map {
+  box-shadow: 1px 6px 6px #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+#eventDetailsMain .map h1 {
+  color: #4b4b4b;
+  font-style: italic;
+  padding-top: 0;
+  padding-bottom: 5px;
+  text-shadow: 3px 6px 4px #f85e3d;
+  font-size: 35px;
+}
+
+/* MEDIA QUERIES OF RESPONSIVE */
+
+/* 768px */
+@media (max-width: 768px) {
+  #eventDetailsMain {
+    margin-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  #eventDetailsMain .eventDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #eventDetailsMain .eventContent h1 {
+    font-size: 34px;
+  }
+
+  .eventContent {
+    padding: 20px;
+  }
+
+  #eventDetailsMain .imgEvent .imgHover {
+    display: none;
+  }
+
+  #eventDetailsMain .imgEvent img {
+    position: static;
+    max-width: 400px;
+  }
+
+  .ticketDetail h2 {
+    font-size: 24px;
+  }
+
+  #eventDetailsMain #ticket-event-detail {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+
+  #eventDetailsMain .eventContent .eventContentList .btn {
+    margin-left: 0;
+  }
+
+  #eventDetailsMain .eventContent .eventContentList .btn button {
+    padding: 6px 15px;
+  }
+
+  .eventRules h2 {
+    font-size: 24px;
+  }
+
+  .eventRules ul {
+    font-size: 17px;
+  }
+}
+
+/* 576px */
+@media (max-width: 576px) {
+  #eventDetailsMain .eventDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #eventDetailsMain .eventContent h1 {
+    font-size: 30px;
+  }
+
+  #eventDetailsMain .imgEvent img {
+    max-width: 300px;
+  }
+
+  #eventDetailsMain .eventContent .eventContentList .btn button {
+    padding: 8px;
+  }
+}
+
+/* SHARE PAGE*/
+
+a {
+  text-decoration: none;
+  color: #000;
+}

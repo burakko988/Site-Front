@@ -3,7 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { fetchEventByPlace } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
-import DynamicEventCard from '../../components/Event/DynamicEventCard';
+import DynamicEventCard from '../../components/Event/EventCard';
 
 const index = () => {
   const { place } = useParams();

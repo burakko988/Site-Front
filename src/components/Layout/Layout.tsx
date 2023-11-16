@@ -1,7 +1,7 @@
 // Layout.tsx
 import React, { ReactNode } from 'react';
 import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
-import ImageCarousel from '../Home/Slider/slider'; // Yolunuzun doğru olduğundan emin olun
+import HomeSlider from '../Home/HomeSlider/HomeSlider'; // Yolunuzun doğru olduğundan emin olun
 import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';
 import Footer from '../Footer/footer';
@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Toolbar>
         </Container>
       </AppBar>
-      {isHomePage && <ImageCarousel />}
+      {isHomePage && <HomeSlider />}
       <EventCategories />
       <Container>
         <Box marginTop={2}>{children}</Box>
