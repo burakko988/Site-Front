@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import EventCard from './EventCard';
-import { fetchEvents } from '../../services/eventService';
+import { useEffect } from 'react';
+import EventCard from '../../components/Event/EventCard';
 import { fetchEventByCategory } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
-const EventList: React.FC = () => {
+const CategoryPage = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const { category } = useParams();
@@ -16,10 +16,7 @@ const EventList: React.FC = () => {
     console.log('pathname', pathname, 'category', category);
   });
 
-  const queryKey = pathname === '/' ? ['events'] : ['events', category];
-  const queryFn = pathname === '/' ? fetchEvents : () => fetchEventByCategory(category!);
-
-  const { data, isLoading, isError } = useQuery(queryKey, queryFn, {
+  const { data, isLoading, isError } = useQuery(['events', category], () => fetchEventByCategory(category!), {
     staleTime: 3000,
   });
 
@@ -32,11 +29,16 @@ const EventList: React.FC = () => {
   }
 
   if (!data) {
-    return null; // veya başka bir placeholder gösterebilirsiniz
+    return null;
   }
 
   return (
-    <>
+    <div>
+      <Helmet>
+        <title>{category!.charAt(0).toUpperCase() + category!.slice(1)}</title>
+
+        <meta name="description" content="Discover our events and get information about the latest activities." />
+      </Helmet>
       <h1>{category}</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
@@ -47,8 +49,8 @@ const EventList: React.FC = () => {
           ))}
         </Grid>
       </div>
-    </>
+    </div>
   );
 };
 
-export default EventList;
+export default CategoryPage;

@@ -4,8 +4,6 @@ import EventIcon from '@mui/icons-material/Event';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import 'dayjs/locale/tr';
-
-import { toKebabCase } from '../../helpers/toKebabCase';
 import slugify from 'slugify';
 
 export interface DynamicEventCardProps {
@@ -24,7 +22,7 @@ export interface DynamicEventCardProps {
 function DynamicEventCard({ event }: DynamicEventCardProps) {
   const { _id, title } = event;
 
-  const kebabTitle = slugify(title);
+  const slugTitle = slugify(title, { lower: true });
 
   dayjs.locale('tr');
 
@@ -33,7 +31,7 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
 
   return (
     <Card className="card-component">
-      <Link to={`/event-details/${kebabTitle}`} state={{ id: _id }}>
+      <Link to={`/event-details/${slugTitle}`} state={{ id: _id }}>
         <CardMedia component="img" height="180" image={event.images[0]} alt="Event Image" />
         <CardContent>
           <Typography className="truncate-2" variant="h5" component="div">

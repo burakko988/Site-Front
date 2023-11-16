@@ -1,10 +1,10 @@
 import Home from './pages/Home';
-import EventDetails from './pages/EventDetailsPage';
+import EventDetailsPage from './pages/EventDetailsPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import EventList from './components/Event/EventList';
-import PreviousEvents from './pages/PreviousEvents/';
+import PreviousEventsPage from './pages/PreviousEventsPage';
 import PlacePage from './pages/PlacePage';
+import CategoryPage from './pages/CategoryPage';
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/event-details/:eventName" element={<EventDetails />} />
-          <Route path="/category/:category" element={<EventList />} />
-          <Route path="/previous-events" element={<PreviousEvents />} />
+          <Route path="/event-details/:eventName" element={<EventDetailsPage />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/previous-events" element={<PreviousEventsPage />} />
           <Route path="/place/:place" element={<PlacePage />} />
         </Routes>
       </Layout>

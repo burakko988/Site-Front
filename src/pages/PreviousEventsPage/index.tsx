@@ -3,6 +3,7 @@ import DynamicEventCard from '../../components/Event/EventCard';
 import { fetchPreviousEvents } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
+import { Helmet } from 'react-helmet';
 
 const DynamicEventList: React.FC = () => {
   const { data, isLoading, isError } = useQuery('previousEvents', fetchPreviousEvents, {
@@ -23,6 +24,10 @@ const DynamicEventList: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Previos Events</title>
+        <meta name="description" content="Discover our events and get information about the latest activities." />
+      </Helmet>
       <h1>Previous Events</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>

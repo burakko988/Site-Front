@@ -1,9 +1,9 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchEventByPlace } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
 import DynamicEventCard from '../../components/Event/EventCard';
+import { Helmet } from 'react-helmet';
 
 const index = () => {
   const { place } = useParams();
@@ -25,6 +25,10 @@ const index = () => {
   }
   return (
     <>
+      <Helmet>
+        <title>{data[0].place}</title>
+      </Helmet>
+
       <h1>{place}</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
