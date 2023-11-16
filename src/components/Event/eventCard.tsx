@@ -4,8 +4,6 @@ import EventIcon from '@mui/icons-material/Event';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import 'dayjs/locale/tr';
-
-import { toKebabCase } from '../../helpers/toKebabCase';
 import slugify from 'slugify';
 
 export interface DynamicEventCardProps {
