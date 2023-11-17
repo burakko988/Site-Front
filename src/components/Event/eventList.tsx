@@ -32,7 +32,7 @@ const EventList: React.FC = () => {
   }
 
   if (!data) {
-    return null; // veya başka bir placeholder gösterebilirsiniz
+    return null;
   }
 
   return (

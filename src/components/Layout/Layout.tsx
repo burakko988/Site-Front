@@ -1,11 +1,11 @@
 // Layout.tsx
 import React, { ReactNode } from 'react';
 import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
-import HomeSlider from '../Home/HomeSlider/HomeSlider'; // Yolunuzun doğru olduğundan emin olun
+import HomeSlider from '../Home/HomeSlider/HomeSlider';
 import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';
-import Footer from '../Footer/footer';
-import { Navbar } from '../Navbar/navbar';
+import Footer from '../Footer/Footer';
+import { Navbar } from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
 
 interface LayoutProps {

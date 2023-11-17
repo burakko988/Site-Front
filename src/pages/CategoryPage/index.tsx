@@ -36,7 +36,6 @@ const CategoryPage = () => {
     <div>
       <Helmet>
         <title>{category!.charAt(0).toUpperCase() + category!.slice(1)}</title>
-
         <meta name="description" content="Discover our events and get information about the latest activities." />
       </Helmet>
       <h1>{category}</h1>
