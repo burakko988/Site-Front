@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { fetchEventByPlace } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
-import DynamicEventCard from '../../components/Event/TempEventCard';
+import DynamicEventCard from '../../components/Event/EventCard';
 import { Helmet } from 'react-helmet';
 
 const index = () => {

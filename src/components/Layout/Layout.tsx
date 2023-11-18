@@ -2,10 +2,10 @@
 import React, { ReactNode } from 'react';
 import { AppBar, Toolbar, Container, Box } from '@mui/material';
 import HomeSlider from '../Home/HomeSlider/HomeSlider';
-import EventCategories from '../Event/TempEventCategories';
+import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';
-import Footer from '../Footer/TempFooter';
-import { Navbar } from '../TempNavbar/TempNavbar';
+import Footer from '../Footer/Footer';
+import { Navbar } from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import EventLogo from '../../assets/images/eventoria-logo.png';
 
