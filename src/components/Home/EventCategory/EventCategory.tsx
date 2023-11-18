@@ -1,5 +1,3 @@
-import React from 'react';
-
 const EventCategory = () => {
   const categories = ['Concert', 'Theatre', 'Festival', 'Stand up', 'Kids activities', 'Blog'];
 
