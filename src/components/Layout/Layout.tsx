@@ -1,6 +1,6 @@
 // Layout.tsx
 import React, { ReactNode } from 'react';
-import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
+import { AppBar, Toolbar, Container, Box } from '@mui/material';
 import HomeSlider from '../Home/HomeSlider/HomeSlider';
 import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';

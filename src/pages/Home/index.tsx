@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import EventList from '../../components/Event/eventList';
+import EventList from '../../components/Event/EventList';
 
 const Home = () => {
   return (
