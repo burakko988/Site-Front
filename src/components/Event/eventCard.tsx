@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/tr';
 import slugify from 'slugify';
 
-export interface DynamicEventCardProps {
+export interface EventCardProps {
   event: {
     _id: string;
     imageUrl: string;
@@ -19,7 +19,7 @@ export interface DynamicEventCardProps {
   };
 }
 
-function DynamicEventCard({ event }: DynamicEventCardProps) {
+function EventCard({ event }: EventCardProps) {
   const { _id, title } = event;
 
   const slugTitle = slugify(title, { lower: true });
@@ -82,4 +82,4 @@ function DynamicEventCard({ event }: DynamicEventCardProps) {
   );
 }
 
-export default DynamicEventCard;
+export default EventCard;
