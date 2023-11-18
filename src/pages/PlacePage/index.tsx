@@ -29,7 +29,7 @@ const index = () => {
         <title>{data[0].place}</title>
       </Helmet>
 
-      <h1>{place}</h1>
+      <h1>{data[0].place} Events</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
           {data.map((event: any) => (

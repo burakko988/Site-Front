@@ -1,32 +1,30 @@
 import React from 'react';
+import FooterLogo from '../../assets/images/eventoria-footer-logo.png';
 
-function MyComponent() {
+function SocialMediaIcon() {
   const gridContainerStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: '',
-    height: '40%',
-    padding: '0 200px',
   };
 
   const gridItemStyle: React.CSSProperties = {
-    padding: '10px',
+    padding: '30px',
     textAlign: 'center',
   };
 
   const lineStyle: React.CSSProperties = {
-    borderRight: '1px solid #2581c2',
     height: '30%',
   };
 
   return (
     <div style={gridContainerStyle} className="grid-container">
       <div style={{ flex: 1, ...gridItemStyle, flexBasis: '20%', fontSize: '25px', color: '#fff' }} className="grid-item">
-        <p>EVENT PROJECT</p>
+        <img src={FooterLogo} style={{ height: '35px' }} alt="" />
       </div>
       <div style={lineStyle} className="line"></div>
-      <div style={{ flex: 1, ...gridItemStyle, flexBasis: '50%', fontSize: '18px', color: '#2581c2', whiteSpace: 'normal', wordWrap: 'break-word' }} className="grid-item">
-        <p>Event Project, organizatörler tarafından düzenlenen farklı kategorilerdeki etkinlikleri, milyonlara ulaştıran yeni nesil bir sitesidir.</p>
+      <div style={{ flex: 1, ...gridItemStyle, textAlign: 'justify', flexBasis: '50%', fontSize: '18px', color: '#2581c2', whiteSpace: 'normal', wordWrap: 'break-word' }} className="grid-item">
+        <p>Eventoria, organizatörler tarafından düzenlenen farklı kategorilerdeki etkinlikleri, milyonlara ulaştıran yeni nesil bir sitesidir.</p>
       </div>
 
       <div style={{ flex: 1, ...gridItemStyle, flexBasis: '30%' }} className="grid-item">
@@ -54,4 +52,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default SocialMediaIcon;
