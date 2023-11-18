@@ -1,4 +1,4 @@
-import EventDetailsComp from '../../components/EventDetails/EventDetailsComp';
+import EventDetailsComp from '../../components/TempEventDetails/TempEventDetailsComp';
 
 const EventDetails = () => {
   return (

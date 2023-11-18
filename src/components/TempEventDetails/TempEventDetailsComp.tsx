@@ -1,12 +1,12 @@
 import { useLocation } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { fetchEventById } from '../../services/eventService';
-import GoogleMapComponent from './GoogleMapComponent';
-import SliderEventDetail from './EventDetailSlider';
-import EventDetailImage from './EventDetailImage';
-import EventDetailContent from './EventDetailContent';
-import TicketDetailContent from './TicketDetailContent';
-import EventRules from './EventRules';
+import GoogleMapComponent from './TempGoogleMapComponent';
+import SliderEventDetail from './TempEventDetailSlider';
+import EventDetailImage from './TempeventDetailImage';
+import EventDetailContent from './TempEventDetailContent';
+import TicketDetailContent from './TempTicketDetailContent';
+import EventRules from './TempEventRules';
 import './eventDetails.css';
 import { Helmet } from 'react-helmet';
 

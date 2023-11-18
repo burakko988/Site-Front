@@ -1,5 +1,5 @@
 import React from 'react';
-import DynamicEventCard from '../../components/Event/EventCard';
+import DynamicEventCard from '../../components/Event/TempEventCard';
 import { fetchPreviousEvents } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';

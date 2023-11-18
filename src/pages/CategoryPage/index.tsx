@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import EventCard from '../../components/Event/EventCard';
+import EventCard from '../../components/Event/TempEventCard';
 import { fetchEventByCategory } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import EventCard from './EventCard';
+import EventCard from './TempEventCard';
 import { fetchEvents } from '../../services/eventService';
 import { fetchEventByCategory } from '../../services/eventService';
 import { useQuery } from 'react-query';

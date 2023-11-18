@@ -2,7 +2,7 @@ import React from 'react';
 import Festival from '@mui/icons-material/Festival';
 import Favorite from '@mui/icons-material/Favorite';
 import { Link } from 'react-router-dom';
-import Share from './ShareButton';
+import Share from './TempShareButton';
 import slugify from 'slugify';
 
 interface Props {
