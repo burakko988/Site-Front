@@ -1,15 +1,14 @@
-// import SearchBar from '../../components/Home/Search/search';
-// import ImageCarousel from '../../components/Home/Slider/slider';
-import DynamicEventList from '../../components/Event/DynamicEventList';
-// import EventList from '../../components/Event/eventList';
-// import EventCategory from '../../components/Home/EventCategory/EventCategory';
+import { Helmet } from 'react-helmet';
+import EventList from '../../components/Event/EventList';
 
 const Home = () => {
   return (
-
     <div>
-      {/* <EventList /> */}
-      <DynamicEventList />
+      <Helmet>
+        <title>Home Page - Events</title>
+        <meta name="description" content="Discover our events and get information about the latest activities." />
+      </Helmet>
+      <EventList />
     </div>
   );
 };

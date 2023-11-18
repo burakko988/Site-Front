@@ -1,10 +1,10 @@
 import React from 'react';
 import SocialMediaIcon from './SocialMediaIcon';
 import Category from './Category';
+import { Container } from '@mui/material';
 
 const Footer = () => {
   const footerStyle: React.CSSProperties = {
-    height: '700px',
     backgroundColor: '#205072',
     display: 'flex',
     flexDirection: 'column',
@@ -14,8 +14,10 @@ const Footer = () => {
 
   return (
     <div style={footerStyle}>
-      <SocialMediaIcon />
-      <Category />
+      <Container>
+        <SocialMediaIcon />
+        <Category />
+      </Container>
     </div>
   );
 };

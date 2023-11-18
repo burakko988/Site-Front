@@ -1,7 +1,6 @@
 import SliderComp from '../../Slider/SliderComp';
 
-const ImageCarousel = () => {
-  
+const HomeSlider = () => {
   return (
     <div>
       <SliderComp />
@@ -9,4 +8,4 @@ const ImageCarousel = () => {
   );
 };
 
-export default ImageCarousel;
+export default HomeSlider;

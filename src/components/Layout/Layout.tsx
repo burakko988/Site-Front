@@ -1,12 +1,13 @@
 // Layout.tsx
 import React, { ReactNode } from 'react';
-import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
-import ImageCarousel from '../Home/Slider/slider'; // Yolunuzun doğru olduğundan emin olun
+import { AppBar, Toolbar, Container, Box } from '@mui/material';
+import HomeSlider from '../Home/HomeSlider/HomeSlider';
 import EventCategories from '../Event/EventCategories';
 import { useLocation } from 'react-router-dom';
-import Footer from '../Footer/footer';
-import { Navbar } from '../Navbar/navbar';
+import Footer from '../Footer/Footer';
+import { Navbar } from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import EventLogo from '../../assets/images/eventoria-logo.png';
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,18 +20,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <Navbar />
 
-      <AppBar position="sticky" sx={{ paddingTop: '15px', paddingBottom: '15px', backgroundColor: '#01a3a4' }}>
+      <AppBar position="sticky" sx={{ paddingTop: '15px', paddingBottom: '15px', backgroundColor: '#2ED87B' }}>
         <Container>
           <Toolbar>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Typography sx={{ fontSize: '24px' }} variant="h6" component="h1">
-                My Application
-              </Typography>
+              <img src={EventLogo} alt="My Application Logo" style={{ height: '35px' }} />
             </Link>
           </Toolbar>
         </Container>
       </AppBar>
-      {isHomePage && <ImageCarousel />}
+      {isHomePage && <HomeSlider />}
       <EventCategories />
       <Container>
         <Box marginTop={2}>{children}</Box>

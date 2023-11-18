@@ -1,20 +1,14 @@
 import React from 'react'
-import { EventCardProps } from '../Event/eventCard';
 
 interface Props {
-  event: EventCardProps | undefined;
+  event: any;
 }
 
 const EventDetailImage: React.FC<Props> = ({ event }) => {
-  if (!event) {
-    return null; // veya hata mesajı veya boş bir şey dönebilirsiniz
-  }
 
   return (
     <section className="imgEvent">
-      <div>
-        <img src={event.resimUrl} alt={event.etkinlikAdi} />
-      </div>
+      <img src={event.images[0]} alt={event?.title + ' ' + event?.description} />
     </section>
   );
 };
