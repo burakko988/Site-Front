@@ -1,20 +1,34 @@
 import * as React from 'react';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+  XIcon,
+  FacebookIcon
+} from 'react-share';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import './eventDetails.css';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import ShareIcon from '@mui/icons-material/Share';
+import slugify from 'slugify';
 
-export default function Share() {
+export default function Share(props: any) {
+  const { title } = props
+
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const slugTitle = slugify(title, { lower: true });
+  console.log('slugTitle', slugTitle);;
+
+  const shareUrl = `https://eventoria-front.vercel.app/event-details/${slugTitle}`;
+  // const shareUrl = window.location.href;
+  // const shareUrl = 'https://www.github.com';
+
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -52,28 +66,26 @@ export default function Share() {
         }}
       >
         <Typography sx={{ p: 2 }}>
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <WhatsAppIcon sx={{ marginRight: 1 }} />
-            WhatsApp'ta Paylaş
-          </a>
+          <WhatsappShareButton url={shareUrl} title={title} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <WhatsappIcon size={24} round />
+            Whatsapp'da Paylaş
+          </WhatsappShareButton>
         </Typography>
         <Typography sx={{ p: 2 }}>
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <InstagramIcon sx={{ marginRight: 1 }} />
-            Instagram'da Paylaş
-          </a>
+          <div>
+            <TwitterShareButton url={shareUrl} title={title} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <XIcon size={24} round />
+              Twitter'da Paylaş
+            </TwitterShareButton>
+          </div>
         </Typography>
         <Typography sx={{ p: 2 }}>
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <TwitterIcon sx={{ marginRight: 1 }} />
-            Twitter'da Paylaş
-          </a>
-        </Typography>
-        <Typography sx={{ p: 2 }}>
-          <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-            <FacebookIcon sx={{ marginRight: 1 }} />
-            Facebook'ta Paylaş
-          </a>
+          <div>
+            <FacebookShareButton hashtag="#event" url={shareUrl} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <FacebookIcon size={24} round />
+              Facebook'ta Paylaş
+            </FacebookShareButton>
+          </div>
         </Typography>
       </Popover>
     </div>

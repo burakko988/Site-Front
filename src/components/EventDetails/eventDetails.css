@@ -1,6 +1,8 @@
 /* MAIN */
 main {
   background-color: #f1f1f1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 /* General Container */
@@ -291,6 +293,11 @@ main {
   border-radius: 20px;
 }
 
+.map .googleMap {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
 #eventDetailsMain .map h1 {
   color: #4b4b4b;
   font-style: italic;
@@ -364,6 +371,11 @@ main {
     align-items: center;
   }
 
+  .eventContent {
+    padding: 5px;
+    border-radius: 15px;
+  }
+
   #eventDetailsMain .eventContent h1 {
     font-size: 30px;
   }
@@ -375,11 +387,26 @@ main {
   #eventDetailsMain .eventContent .eventContentList .btn button {
     padding: 8px;
   }
+
+  .ticketDetail .listHead,
+  .ticketDetail .listDetail {
+    justify-content: space-evenly;
+  }
+
+  .ticketDetail .listDetail {
+    padding: 10px 12px 23px;
+    margin-top: 10px;
+  }
 }
 
 /* SHARE PAGE*/
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #808080;
+}
+
+body {
+  padding-right: 0px !important;
+  overflow: auto !important;
 }

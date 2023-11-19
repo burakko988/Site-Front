@@ -23,7 +23,7 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
               <Festival sx={{ color: '#331D2C', marginLeft: '20px' }} />
               <Link to={`/place/${slugify(event.place, { lower: true })}`}>{event?.place}</Link>
             </div>
-            <Share />
+            <Share {...event} />
           </div>
         </div>
         <div className="eventContentDetail">
