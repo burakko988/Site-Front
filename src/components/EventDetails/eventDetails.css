@@ -291,6 +291,11 @@ main {
   border-radius: 20px;
 }
 
+.map .googleMap {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
 #eventDetailsMain .map h1 {
   color: #4b4b4b;
   font-style: italic;
