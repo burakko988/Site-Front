@@ -11,7 +11,6 @@ interface GoogleMapComponentProps {
 }
 
 const containerStyle = {
-  maxWidth: '600px',
   height: '350px',
   borderRadius: '20px',
   border: '8px ridge #01A3A4'
