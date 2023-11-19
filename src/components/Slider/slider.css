@@ -37,11 +37,11 @@
 }
 
 .carousel-control {
-  background: #01A3A4;
+  background: #134646;
   border-radius: 50%;
-  color: #ff00ae;
+  color: #2ed87b;
   cursor: pointer;
-  opacity: .4;
+  opacity: 0.7;
   display: none;
   font-size: 40px;
   height: 40px;
@@ -55,7 +55,7 @@
   text-align: center;
   width: 40px;
   z-index: 10;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .carousel-control.prev {
@@ -67,8 +67,8 @@
 }
 
 .carousel-control:hover {
-  background: #ff12b4;
-  color: #01A3A4;
+  background: #2ed87b;
+  color: #134646;
   opacity: 1;
 }
 
