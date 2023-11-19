@@ -405,3 +405,8 @@ a {
   text-decoration: none;
   color: #808080;
 }
+
+body {
+  padding-right: 0px !important;
+  overflow: auto !important;
+}
