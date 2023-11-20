@@ -15,20 +15,21 @@ import slugify from 'slugify';
 
 export default function Share(props: any) {
   const { title } = props
-
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
   const slugTitle = slugify(title, { lower: true });
-  console.log('slugTitle', slugTitle);;
-
   const shareUrl = `https://eventoria-front.vercel.app/event-details/${slugTitle}`;
   // const shareUrl = window.location.href;
   // const shareUrl = 'https://www.github.com';
 
+  const shareCss = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px',
+  };
+  
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -66,14 +67,14 @@ export default function Share(props: any) {
         }}
       >
         <Typography sx={{ p: 2 }}>
-          <WhatsappShareButton url={shareUrl} title={title} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <WhatsappShareButton url={shareUrl} title={title} style={shareCss}>
             <WhatsappIcon size={24} round />
             Whatsapp'da Paylaş
           </WhatsappShareButton>
         </Typography>
         <Typography sx={{ p: 2 }}>
           <div>
-            <TwitterShareButton url={shareUrl} title={title} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <TwitterShareButton url={shareUrl} title={title} style={shareCss}>
               <XIcon size={24} round />
               Twitter'da Paylaş
             </TwitterShareButton>
@@ -81,7 +82,7 @@ export default function Share(props: any) {
         </Typography>
         <Typography sx={{ p: 2 }}>
           <div>
-            <FacebookShareButton hashtag="#event" url={shareUrl} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <FacebookShareButton hashtag="#event" url={shareUrl} style={shareCss}>
               <FacebookIcon size={24} round />
               Facebook'ta Paylaş
             </FacebookShareButton>

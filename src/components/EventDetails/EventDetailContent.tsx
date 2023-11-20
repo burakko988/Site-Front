@@ -32,7 +32,7 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
             <strong>{event?.title}</strong> {event?.place} Büyükşehir Belediyesi Sponsorluğunda şehrinize eğlence getiren yapım {event?.description} alanında sizlerle buluşuyor.
           </p>
           <p>
-            {event?.title}, maksimum eğlence için {event?.description} sahnesinde sizlerle olacak...
+            {event?.title}, maksimum eğlence için {event?.description} Sahnede sizlerle birlikte olacak..
           </p>
         </div>
         <div className="eventContentList">
@@ -43,7 +43,7 @@ const EventDetailContent: React.FC<Props> = ({ event }) => {
           </div>
           <span className="hr"></span>
           <div>
-            <h4>Sanatçı {event?.title}</h4>
+            <h4>Sanatçı: {event?.title}</h4>
           </div>
           <span className="hr"></span>
           <div>
