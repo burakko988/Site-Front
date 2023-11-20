@@ -1,4 +1,3 @@
-import React from 'react';
 import CategorySelect from './CategorySelect';
 import DateSelect from './DateSelect';
 import CitySelect from './CitySelect';
