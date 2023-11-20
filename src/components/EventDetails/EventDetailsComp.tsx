@@ -58,7 +58,9 @@ const EventDetailsComp = () => {
               <div className="eventContent">
                 <div className="map">
                   <h1>Location</h1>
-                  <GoogleMapComponent coords={event.coords} />
+                  <div className="googleMap">
+                    <GoogleMapComponent coords={event.coords} />
+                  </div>
                 </div>
               </div>
             )}
