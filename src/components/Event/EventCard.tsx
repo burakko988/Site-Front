@@ -22,7 +22,7 @@ export interface EventCardProps {
 function EventCard({ event }: EventCardProps) {
   const { _id, title } = event;
 
-  const slugTitle = slugify(title, { lower: true });
+  const slugTitle = slugify(title, { lower: true, strict: true });
 
   dayjs.locale('tr');
 
