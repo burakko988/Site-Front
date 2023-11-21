@@ -1,6 +1,6 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import { fetchEventById } from '../../services/eventService';
+import { fetchEventByTitle } from '../../services/eventService';
 import GoogleMapComponent from './GoogleMapComponent';
 import SliderEventDetail from './EventDetailSlider';
 import EventDetailImage from './EventDetailImage';
@@ -11,16 +11,14 @@ import './eventDetails.css';
 import { Helmet } from 'react-helmet';
 
 const EventDetailsComp = () => {
-  const location = useLocation();
-  const { id } = location.state || {};
+  const { title } = useParams();
 
   const {
     data: event,
     isLoading,
     error,
-  } = useQuery(['event', id], () => fetchEventById(id), {
-    // Eğer id undefined ise sorguyu pasif yapmak için
-    enabled: !!id,
+  } = useQuery(['events', title], () => fetchEventByTitle(title!), {
+    staleTime: 3000,
   });
 
   if (isLoading) return <div>Loading...</div>;
