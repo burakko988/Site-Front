@@ -1,4 +1,4 @@
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { fetchEventByTitle } from '../../services/eventService';
 import GoogleMapComponent from './GoogleMapComponent';
