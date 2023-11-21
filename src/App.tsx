@@ -12,7 +12,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/event-details/:eventName" element={<EventDetailsPage />} />
+          <Route path="/event-details/:title" element={<EventDetailsPage />} />
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/previous-events" element={<PreviousEventsPage />} />
           <Route path="/place/:place" element={<PlacePage />} />

@@ -27,6 +27,16 @@ export const fetchEventById = async (eventId: string) => {
   }
 };
 
+export const fetchEventByTitle = async (title: string) => {
+  try {
+    const response = await apiClient.get(`/publicEvent/title/${title}`);
+    console.log('Event Data: ', response.data);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data.message || 'Network error occurred');
+  }
+};
+
 export const fetchEventByCategory = async (category: string) => {
   try {
     const response = await apiClient.get(`/publicEvent/category/${category}`);
