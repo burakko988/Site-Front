@@ -26,8 +26,8 @@ function EventCard({ event }: EventCardProps) {
 
   dayjs.locale('tr');
 
-  const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD MMMM dddd / HH:mm') : '';
-  const formattedEndDate = event.endDate && dayjs(event.endDate).isValid() ? dayjs(event.endDate).format('DD.MM.YYYY HH:mm') : '';
+  const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD MMMM dddd ') : '';
+  const formattedEndDate = event.endDate && dayjs(event.endDate).isValid() ? dayjs(event.endDate).format('DD MMMM') : '';
 
   return (
     <Card className="card-component">
@@ -49,14 +49,16 @@ function EventCard({ event }: EventCardProps) {
             <Grid item xs={12}>
               <Box display="flex" alignItems="center">
                 <EventIcon color="primary" style={{ marginRight: 8 }} />
-                <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
+                <Typography className="truncate-1" variant="caption" color="textSecondary" component="span">
                   <h4>{formattedDate}</h4>
                 </Typography>
-
-                {formattedEndDate && <EventIcon color="primary" style={{ marginRight: 8 }} />}
-                <Typography className="truncate-1" variant="body2" color="textSecondary" component="span">
-                  <h4>{formattedEndDate}</h4>
-                </Typography>
+                {formattedEndDate && (
+                  <>
+                    <Typography style={{ marginRight: 8 }} className="truncate-1" variant="caption" color="textSecondary" component="span">
+                      <h4>/ {formattedEndDate}</h4>
+                    </Typography>
+                  </>
+                )}
               </Box>
             </Grid>
           </Grid>
