@@ -62,7 +62,7 @@ function Category() {
           <h2>Kategoriler</h2>
           <ul style={listItemStyle}>
             <li>
-              <a href="/category/previous-events" style={linkStyle} className="hover-link linkStyle">
+              <a href="/previous-events" style={linkStyle} className="hover-link linkStyle">
                 Previous Events
               </a>
             </li>
@@ -72,8 +72,8 @@ function Category() {
               </a>
             </li>
             <li>
-              <a href="/category/theatre" style={linkStyle} className="hover-link linkStyle">
-                Theatre
+              <a href="/category/theater" style={linkStyle} className="hover-link linkStyle">
+                Theater
               </a>
             </li>
             <li>
@@ -82,7 +82,7 @@ function Category() {
               </a>
             </li>
             <li>
-              <a href="/category/stand-up" style={linkStyle} className="hover-link linkStyle">
+              <a href="/category/standup" style={linkStyle} className="hover-link linkStyle">
                 Stand Up
               </a>
             </li>
