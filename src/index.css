@@ -3,6 +3,24 @@
   padding: 0;
 }
 
+/* LOADING */
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid #94a3b8;
+  border-radius: 50%;
+  margin: 0 auto;
+  border-top-color: #059669;
+  animation: spinner 0.3s linear infinite;
+}
+
 /*event card page*/
 
 .card-component {
