@@ -9,6 +9,7 @@ import TicketDetailContent from './TicketDetailContent';
 import EventRules from './EventRules';
 import './eventDetails.css';
 import { Helmet } from 'react-helmet';
+import Loading from '../Loading/Loading';
 
 const EventDetailsComp = () => {
   const { title } = useParams();
@@ -21,7 +22,9 @@ const EventDetailsComp = () => {
     staleTime: 3000,
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (error instanceof Error) return <div>An error has occurred: {error.message}</div>;
 

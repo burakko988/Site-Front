@@ -6,6 +6,7 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { useLocation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const EventList: React.FC = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const EventList: React.FC = () => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {

@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
 import DynamicEventCard from '../../components/Event/EventCard';
 import { Helmet } from 'react-helmet';
+import Loading from '../../components/Loading/Loading';
 
 const index = () => {
   const { place } = useParams();
@@ -13,7 +14,7 @@ const index = () => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {

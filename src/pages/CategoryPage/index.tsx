@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Loading from '../../components/Loading/Loading';
 
 const CategoryPage = () => {
   const location = useLocation();
@@ -21,7 +22,7 @@ const CategoryPage = () => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {

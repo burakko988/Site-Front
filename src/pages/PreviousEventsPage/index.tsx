@@ -4,6 +4,7 @@ import { fetchPreviousEvents } from '../../services/eventService';
 import { useQuery } from 'react-query';
 import Grid from '@mui/material/Grid';
 import { Helmet } from 'react-helmet';
+import Loading from '../../components/Loading/Loading';
 
 const DynamicEventList: React.FC = () => {
   const { data, isLoading, isError } = useQuery('previousEvents', fetchPreviousEvents, {
@@ -11,7 +12,7 @@ const DynamicEventList: React.FC = () => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {
