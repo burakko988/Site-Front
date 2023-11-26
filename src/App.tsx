@@ -5,6 +5,7 @@ import Layout from './components/Layout/Layout';
 import PreviousEventsPage from './pages/PreviousEventsPage';
 import PlacePage from './pages/PlacePage';
 import CategoryPage from './pages/CategoryPage';
+import Particle from './components/Particles/Particle';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/previous-events" element={<PreviousEventsPage />} />
           <Route path="/place/:place" element={<PlacePage />} />
         </Routes>
+        <Particle />
       </Layout>
     </Router>
   );

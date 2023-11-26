@@ -6,7 +6,7 @@ function Category() {
   const columnStyle: React.CSSProperties = {
     flex: 1,
     padding: '50px 0',
-    color: '#2581c2',
+    color: '#2e86de',
   };
 
   const listItemStyle: React.CSSProperties = {
@@ -15,7 +15,8 @@ function Category() {
 
   const linkStyle: React.CSSProperties = {
     textDecoration: 'none',
-    color: '#2581c2',
+    padding: '5px',
+    color: '#2e86de',
     fontSize: '20px',
     transition: 'color 0.3s',
   };

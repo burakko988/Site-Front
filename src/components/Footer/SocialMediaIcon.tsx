@@ -23,7 +23,7 @@ function SocialMediaIcon() {
         <img src={FooterLogo} style={{ height: '35px' }} alt="" />
       </div>
       <div style={lineStyle} className="line"></div>
-      <div style={{ flex: 1, ...gridItemStyle, textAlign: 'justify', flexBasis: '50%', fontSize: '18px', color: '#2581c2', whiteSpace: 'normal', wordWrap: 'break-word' }} className="grid-item">
+      <div style={{ flex: 1, ...gridItemStyle, textAlign: 'justify', flexBasis: '50%', fontSize: '18px', color: '#2e86de', whiteSpace: 'normal', wordWrap: 'break-word' }} className="grid-item">
         <p>Eventoria, organizatörler tarafından düzenlenen farklı kategorilerdeki etkinlikleri, milyonlara ulaştıran yeni nesil bir sitesidir.</p>
       </div>
 
