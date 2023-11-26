@@ -6,6 +6,7 @@ import { Container } from '@mui/material';
 const Footer = () => {
   const footerStyle: React.CSSProperties = {
     backgroundColor: '#205072',
+    opacity: '0.92',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
