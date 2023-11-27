@@ -23,10 +23,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <AppBar position="sticky" sx={{ paddingTop: '15px', paddingBottom: '15px', backgroundColor: '#2ED87B' }}>
         <Container>
-          <Toolbar>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={EventLogo} alt="My Application Logo" style={{ height: '35px' }} />
             </Link>
+
             <FilterBar />
           </Toolbar>
         </Container>
