@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -6,11 +6,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import slugify from 'slugify';
-
-interface Option {
-  category: string;
-  label: string;
-}
+import { useQuery } from 'react-query';
+import { fetchFilteredEvents } from '../../services/eventService';
 
 const StyledTextField = styled(TextField)({
   '& .MuiInputAdornment-root .MuiSvgIcon-root': {
@@ -21,44 +18,23 @@ const StyledTextField = styled(TextField)({
     color: 'primary.main',
     transform: 'scale(1.2)',
   },
+  '&:hover .MuiInputAdornment-root .MuiSvgIcon-root': {
+    color: 'primary.main',
+    transform: 'scale(1.2)',
+  },
 });
 
 const FilterBar = () => {
-  const defaultOptions = [
-    { label: 'Option 1', value: 1 },
-    { label: 'Option 2', value: 2 },
-    // ... daha fazla varsayılan seçenek
-  ];
   const [query, setQuery] = useState('');
-  const [options, setOptions] = useState<Option[]>([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:3000/api/publicEvent/filter-events?search=${query}`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        console.log('Gelen datalar', data);
-        console.log('query', query);
+  const { data } = useQuery(['events', query], () => fetchFilteredEvents(query), {
+    enabled: !!query, // Query boş değilse isteği etkinleştir
+  });
 
-        const newOptions: Option[] = [...data.titles.map((item: any) => ({ label: item.title, category: 'Events' })), ...data.places.map((item: any) => ({ label: item.place, category: 'Places' }))];
-
-        setOptions(newOptions);
-      } catch (error) {
-        console.error('Fetch error:', error);
-      }
-    };
-
-    if (query) {
-      const delayDebounce = setTimeout(() => fetchData(), 500);
-
-      return () => clearTimeout(delayDebounce);
-    } else {
-      setOptions([]); // Query boşsa options'ı sıfırla
-    }
-  }, [query]);
+  const options = useMemo(() => {
+    if (!data) return [];
+    return [...data.titles.map((item: any) => ({ label: item.title, category: 'Events' })), ...data.places.map((item: any) => ({ label: item.place, category: 'Places' }))];
+  }, [data]);
 
   return (
     <>
@@ -66,12 +42,23 @@ const FilterBar = () => {
       <Autocomplete
         sx={{
           background: '#7FFF00',
+          borderRadius: '4px',
+          width: '300px',
           transition: 'background 0.3s',
           '&:focus-within': {
+            borderRadius: '4px',
             background: 'white',
           },
         }}
         freeSolo
+        value={query}
+        inputValue={query}
+        onInputChange={(newInputValue: any) => {
+          setQuery(newInputValue);
+        }}
+        onChange={(newInputValue: any) => {
+          setQuery(newInputValue);
+        }}
         options={options}
         groupBy={(option) => option.category}
         getOptionLabel={(option) => (typeof option === 'string' ? option : option.label)}
@@ -100,7 +87,6 @@ const FilterBar = () => {
                 </InputAdornment>
               ),
             }}
-            style={{ width: 300 }}
           />
         )}
       />
