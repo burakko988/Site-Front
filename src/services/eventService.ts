@@ -68,9 +68,10 @@ export const fetchPreviousEvents = async () => {
 };
 
 export const fetchFilteredEvents = async (query: any) => {
-  const response = await fetch(`http://localhost:3000/api/publicEvent/filter-events?search=${query}`);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
+  try {
+    const response = await apiClient.get(`/publicEvent/filter-events?search=${query}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data.message || 'Network error occurred');
   }
-  return response.json();
 };
