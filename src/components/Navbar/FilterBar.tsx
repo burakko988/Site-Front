@@ -40,23 +40,9 @@ const FilterBar = () => {
     <>
       {query}
       <Autocomplete
-        sx={{
-          background: '#7FFF00',
-          borderRadius: '4px',
-          width: '300px',
-          transition: 'background 0.3s',
-          '&:focus-within': {
-            borderRadius: '4px',
-            background: 'white',
-          },
-        }}
         freeSolo
         value={query}
-        inputValue={query}
-        onInputChange={(newInputValue: any) => {
-          setQuery(newInputValue);
-        }}
-        onChange={(newInputValue: any) => {
+        onInputChange={(_, newInputValue) => {
           setQuery(newInputValue);
         }}
         options={options}
@@ -67,8 +53,8 @@ const FilterBar = () => {
           const url = `${basePath}/${slugify(option.label, { lower: true, strict: true })}`;
 
           return (
-            <li {...props}>
-              <Link to={url} onClick={(e) => e.stopPropagation()}>
+            <li {...props} style={{ padding: 0 }}>
+              <Link to={url} onClick={(e) => e.stopPropagation()} style={{ display: 'block', width: '100%', padding: '15px' }}>
                 {option.label}
               </Link>
             </li>
@@ -77,8 +63,8 @@ const FilterBar = () => {
         renderInput={(params) => (
           <StyledTextField
             {...params}
-            onChange={(e) => setQuery(e.target.value)}
             placeholder="Search Events..."
+            onChange={(e) => setQuery(e.target.value)}
             InputProps={{
               ...params.InputProps,
               startAdornment: (
