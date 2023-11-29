@@ -187,6 +187,10 @@ h2 {
   background: white;
 }
 
+.MuiAutocomplete-root:focus-within {
+  background: white;
+}
+
 .MuiAutocomplete-root .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
   border-color: #205072 !important;
   border-width: 2px;
