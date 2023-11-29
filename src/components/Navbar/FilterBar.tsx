@@ -41,7 +41,6 @@ const FilterBar = () => {
 
   return (
     <>
-      {query}
       <Autocomplete
         freeSolo
         value={query}
