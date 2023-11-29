@@ -33,7 +33,10 @@ const FilterBar = () => {
 
   const options = useMemo(() => {
     if (!data) return [];
-    return [...data.titles.map((item: any) => ({ label: item.title, category: 'Events' })), ...data.places.map((item: any) => ({ label: item.place, category: 'Places' }))];
+    return [
+      ...data.titles.map((item: any) => ({ label: item.title, images: item.images || ['No Image'], category: 'Events' })),
+      ...data.places.map((item: any) => ({ label: item.place, category: 'Places' })),
+    ];
   }, [data]);
 
   return (
@@ -54,7 +57,25 @@ const FilterBar = () => {
 
           return (
             <li {...props} style={{ padding: 0 }}>
-              <Link to={url} onClick={(e) => e.stopPropagation()} style={{ display: 'block', width: '100%', padding: '15px' }}>
+              <Link
+                to={url}
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  width: '100%',
+                  padding: '15px',
+                }}
+              >
+                <img
+                  src={option.images}
+                  alt={option.label}
+                  style={{
+                    height: '25px',
+                    width: '20px',
+                    marginRight: '10px', // Resim ve metin arasında boşluk bırakır
+                  }}
+                />
                 {option.label}
               </Link>
             </li>
