@@ -66,3 +66,12 @@ export const fetchPreviousEvents = async () => {
     throw new Error(error.response?.data.message || 'Network error occurred');
   }
 };
+
+export const fetchFilteredEvents = async (query: any) => {
+  try {
+    const response = await apiClient.get(`/publicEvent/filter-events?search=${query}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data.message || 'Network error occurred');
+  }
+};

@@ -193,3 +193,19 @@ h2 {
     font-size: 15px !important;
   }
 }
+
+.MuiAutocomplete-root {
+  background: #7fff00;
+  border-radius: 4px;
+  width: 300px;
+  transition: background-color 0.3s;
+}
+
+.MuiAutocomplete-root:hover {
+  background: white;
+}
+
+.MuiAutocomplete-root .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #205072 !important;
+  border-width: 2px;
+}

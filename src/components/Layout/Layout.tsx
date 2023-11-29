@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 import { Navbar } from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import EventLogo from '../../assets/images/eventoria-logo.png';
+import FilterBar from '../Navbar/FilterBar';
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,10 +23,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <AppBar position="sticky" sx={{ paddingTop: '15px', paddingBottom: '15px', backgroundColor: '#2ED87B' }}>
         <Container>
-          <Toolbar>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={EventLogo} alt="My Application Logo" style={{ height: '35px' }} />
             </Link>
+
+            <FilterBar />
           </Toolbar>
         </Container>
       </AppBar>
