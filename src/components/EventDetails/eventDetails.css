@@ -378,24 +378,52 @@ main {
 
   #eventDetailsMain .eventContent h1 {
     font-size: 30px;
+    text-align: center;
+  }
+
+  #eventDetailsMain .eventContent .eventContentIcon {
+    flex-direction: column;
   }
 
   #eventDetailsMain .imgEvent img {
-    max-width: 300px;
+    width: 80vw;
+    max-width: 400px;
   }
 
-  #eventDetailsMain .eventContent .eventContentList .btn button {
-    padding: 8px;
+  /* EventContentList */
+  #eventDetailsMain .eventContent .eventContentList {
+    flex-direction: column;
+    margin-top: 20px;
   }
 
-  .ticketDetail .listHead,
-  .ticketDetail .listDetail {
-    justify-content: space-evenly;
+  .eventContentList .hr {
+    display: none;
+  }
+
+  /* ticket list head, ticket list detail */
+  .ticketDetail .listHead{
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .ticketDetail .listHead h2:last-child{
+    display: none;
   }
 
   .ticketDetail .listDetail {
     padding: 10px 12px 23px;
     margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ticketDetail .listDetail section:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .ticketDetail .listDetail .buyTicket {
+    left: 0;
+    border-radius: 0 0 15px 15px;
   }
 }
 
