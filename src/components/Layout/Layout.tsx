@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Container>
           <Toolbar className="LogoAndFilterBar" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <img src={EventLogo} alt="My Application Logo" style={{ height: '35px' }} />
+              <img className="navbar-logo" src={EventLogo} alt="My Application Logo" />
             </Link>
 
             <FilterBar />
