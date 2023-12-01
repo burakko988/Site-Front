@@ -16,7 +16,7 @@
   height: 6rem;
   border: 5px solid #94a3b8;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 50vh auto;
   border-top-color: #059669;
   animation: spinner 0.3s linear infinite;
 }
@@ -224,7 +224,6 @@ h2 {
 
 /* Categories Home */
 @media (max-width: 400px) {
-
   .searchBoxAndLogo {
     width: 88vw;
   }
@@ -242,29 +241,30 @@ h2 {
   .carousel-inner {
     display: none;
   }
-  .carousel, .bodySlider {
+  .carousel,
+  .bodySlider {
     margin: 0;
     padding: 0;
   }
 }
 
 .category-title {
-    color: #059669;
-    font-size: 3rem;
-  }
+  color: #059669;
+  font-size: 3rem;
+}
 
+.navbar-logo {
+  height: 35px;
+}
+
+@media screen and (max-width: 992px) {
   .navbar-logo {
-    height: 35px;
+    height: 30px;
   }
+}
 
-  @media screen and (max-width: 992px) {
-    .navbar-logo {
-      height: 30px;
-    }
+@media screen and (max-width: 600px) {
+  .navbar-logo {
+    height: 25px;
   }
-
-  @media screen and (max-width: 600px) {
-    .navbar-logo {
-      height: 25px;
-    }
-  }
+}
