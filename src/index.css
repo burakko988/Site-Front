@@ -213,3 +213,37 @@ h2 {
   border-color: #205072 !important;
   border-width: 2px;
 }
+
+/* Logo And Filter Bar Responsive */
+@media (max-width: 768px) {
+  .LogoAndFilterBar {
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+/* Categories Home */
+@media (max-width: 400px) {
+
+  .searchBoxAndLogo {
+    width: 88vw;
+  }
+
+  /*Event Categories*/
+  .category-home {
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 120px;
+    height: 100px;
+  }
+
+  .carousel-inner {
+    display: none;
+  }
+  .carousel, .bodySlider {
+    margin: 0;
+    padding: 0;
+  }
+}
