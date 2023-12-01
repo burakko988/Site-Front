@@ -17,7 +17,7 @@ const Particle = () => {
         },
       },
       color: {
-        value: '#fff',
+        value: '#2ED87B',
       },
       shape: {
         type: 'circle',
@@ -26,7 +26,7 @@ const Particle = () => {
         value: 1,
       },
       size: {
-        value: 15,
+        value: 11,
       },
       move: {
         enable: true,
