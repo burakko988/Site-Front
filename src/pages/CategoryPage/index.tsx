@@ -39,7 +39,7 @@ const CategoryPage = () => {
         <title>{category!.charAt(0).toUpperCase() + category!.slice(1)}</title>
         <meta name="description" content="Discover our events and get information about the latest activities." />
       </Helmet>
-      <h1>{category!.charAt(0).toUpperCase() + category!.slice(1)} Events</h1>
+      <h1 className="category-title">{category!.charAt(0).toUpperCase() + category!.slice(1)} Events</h1>
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
           {data.map((event: any) => (

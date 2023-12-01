@@ -42,7 +42,7 @@ const EventList: React.FC = () => {
       <div>
         <Grid sx={{ mt: 4, mx: 'auto' }} container spacing={0}>
           {data.map((event: any) => (
-            <Grid item xs={12} sm={6} md={3} lg={3} key={event._id} sx={{ padding: 2 }}>
+            <Grid item xs={12} sm={6} md={4} lg={3} key={event._id} sx={{ padding: 2 }}>
               <EventCard event={event} />
             </Grid>
           ))}

@@ -213,3 +213,24 @@ h2 {
   border-color: #205072 !important;
   border-width: 2px;
 }
+
+.category-title {
+  color: #059669;
+  font-size: 3rem;
+}
+
+.navbar-logo {
+  height: 35px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-logo {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-logo {
+    height: 25px;
+  }
+}
