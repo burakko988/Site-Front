@@ -52,6 +52,9 @@ Now you can view the project at [http://localhost:3000](http://localhost:3000).
 - React Share - Share buttons for social media platforms
 - React TSParticles - A component to create and animate particles
 - Slugify - A tool for creating slug strings, ideal for URLs
+- @react-google-maps/api - A set of React components for Google Maps
+- Axios - A promise-based HTTP client for making HTTP requests
+- Dayjs - A minimalist JavaScript library for parsing, validating, manipulating, and displaying dates and times
 
 ## 📄 License
 
