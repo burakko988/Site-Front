@@ -41,7 +41,7 @@ const FilterBar = () => {
 
   return (
     <>
-      <Autocomplete
+      <Autocomplete className='searchBoxAndLogo'
         freeSolo
         value={query}
         onInputChange={(_, newInputValue) => {
