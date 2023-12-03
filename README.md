@@ -6,6 +6,10 @@ In this project, we develop a web application for exploring events such as conce
 
 This web application enables users to browse and gain information about current events, including concerts, theater shows, and more. It offers a detailed view of each event, helping users stay informed and engaged.
 
+#### Admin Panel: [https://github.com/burakko988/Admin-Front](https://github.com/burakko988/Admin-Front)
+
+#### Backend: [https://github.com/Berkan-Bilgin/eventoria-backend](https://github.com/Berkan-Bilgin/eventoria-backend)
+
 ## 🎮 Demo
 
 Experience the live demo of the project here: [https://eventoria-front.vercel.app/](https://eventoria-front.vercel.app/)
