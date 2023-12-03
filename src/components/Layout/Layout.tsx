@@ -1,5 +1,5 @@
 // Layout.tsx
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { AppBar, Toolbar, Container, Box } from '@mui/material';
 import HomeSlider from '../Home/HomeSlider/HomeSlider';
 import EventCategories from '../Event/EventCategories';
@@ -17,6 +17,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isDetailPage = location.pathname.includes('/event-details');
+
   return (
     <>
       {/* <Navbar /> */}
@@ -33,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Container>
       </AppBar>
       {isHomePage && <HomeSlider />}
-      <EventCategories />
+      {!isDetailPage && <EventCategories />}
       <Container>
         <Box marginTop={2}>{children}</Box>
       </Container>
