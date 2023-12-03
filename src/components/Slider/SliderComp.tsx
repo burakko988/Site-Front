@@ -1,6 +1,9 @@
-import './slider.css'
+import './slider.css';
 import SagoKonseri from '../../assets/images/sagoKonseri.jpg';
 import ZaferAlagoz from '../../assets/images/zaferAlagöz.png';
+import slideImage1 from '../../assets/images/slideImage11.jpg';
+import slideImage2 from '../../assets/images/slideImage12.jpg';
+import slideImage3 from '../../assets/images/slideImage13.jpg';
 
 const SliderComp = () => {
   return (
@@ -9,15 +12,15 @@ const SliderComp = () => {
         <div className="carousel-inner">
           <input className="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden checked={true} />
           <div className="carousel-item">
-            <img src="https://picsum.photos/1100/500?random=1" />
+            <img src={slideImage1} />
           </div>
           <input className="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden checked={true} />
           <div className="carousel-item">
-            <img src={ZaferAlagoz} />
+            <img src={slideImage2} />
           </div>
           <input className="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden checked={true} />
           <div className="carousel-item">
-            <img src={SagoKonseri} />
+            <img src={slideImage3} />
           </div>
           <label htmlFor="carousel-3" className="carousel-control prev control-1">
             ‹
