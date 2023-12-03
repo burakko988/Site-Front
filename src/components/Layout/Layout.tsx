@@ -1,5 +1,5 @@
 // Layout.tsx
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import { AppBar, Toolbar, Container, Box } from '@mui/material';
 import HomeSlider from '../Home/HomeSlider/HomeSlider';
 import EventCategories from '../Event/EventCategories';

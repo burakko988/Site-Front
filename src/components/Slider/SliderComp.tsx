@@ -1,6 +1,4 @@
 import './slider.css';
-import SagoKonseri from '../../assets/images/sagoKonseri.jpg';
-import ZaferAlagoz from '../../assets/images/zaferAlagöz.png';
 import slideImage1 from '../../assets/images/slideImage11.jpg';
 import slideImage2 from '../../assets/images/slideImage12.jpg';
 import slideImage3 from '../../assets/images/slideImage13.jpg';
