@@ -178,7 +178,6 @@ h2 {
 
   .containerStyle {
     display: flex;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     margin-left: 120px;
@@ -190,7 +189,7 @@ h2 {
   }
 
   .linkStyle {
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -214,6 +213,11 @@ h2 {
   border-width: 2px;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
+
 /* Logo And Filter Bar Responsive */
 @media (max-width: 768px) {
   .LogoAndFilterBar {
@@ -231,11 +235,6 @@ h2 {
   /*Event Categories*/
   .category-home {
     justify-content: center;
-  }
-
-  .nav-link {
-    width: 120px;
-    height: 100px;
   }
 
   .carousel-inner {
@@ -267,4 +266,37 @@ h2 {
   .navbar-logo {
     height: 25px;
   }
+}
+
+@media (max-width: 576px) {
+
+  /*Event Categories*/
+  .category-home {
+    margin-top: 20px;
+  }
+
+  .category-home li a {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    width: 70px;
+    height: 50px;
+    padding: 4px;
+    margin: 6px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+
+  .nav-link:hover {
+    border: 1px solid #2ed87b;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+  }
+
 }
