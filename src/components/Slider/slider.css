@@ -31,7 +31,8 @@
 
 .carousel-item img {
   display: block;
-  height: auto;
+  width: 100%;
+  height: 500px;
   max-width: 100%;
   border-radius: 30px;
 }
