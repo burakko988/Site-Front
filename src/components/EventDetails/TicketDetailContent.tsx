@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React from 'react';
 
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
 }
 
 const TicketDetailContent: React.FC<Props> = ({ event }) => {
+  const formattedDate = event.startDate && dayjs(event.startDate).isValid() ? dayjs(event.startDate).format('DD MMMM dddd ') : '';
   return (
     <>
       <section className="ticketDetail eventContent">
@@ -14,7 +16,7 @@ const TicketDetailContent: React.FC<Props> = ({ event }) => {
         </div>
         <div className="listDetail">
           <section>
-            <h3>{event?.startDate.substring(0, 10)}</h3>
+            <h3>{formattedDate}</h3>
             <p>{event?.place}</p>
             <p>Kredi Kartlarına İndirim Avantajıyla</p>
           </section>
