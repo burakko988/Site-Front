@@ -72,11 +72,14 @@ function EventCard({ event }: EventCardProps) {
               padding: '8px',
               display: 'inline-block',
               width: '100%',
-              marginTop: '16px',
+              marginTop: '24px',
               backgroundColor: '#2ED87B',
             }}
           >
-            Ticket Price: <span>{event.ticketPrice}</span>
+            <div style={{ marginLeft: '20px' }}>
+              {event.ticketPrice}
+              <span style={{ fontSize: '0.7rem' }}>.00 </span>₺
+            </div>
           </Typography>
         </CardContent>
       </Link>
