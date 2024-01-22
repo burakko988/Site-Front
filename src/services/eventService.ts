@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://plankton-app-ouh3i.ondigitalocean.app/api/',
+  baseURL: 'https://eventoria-backend.vercel.app/api/',
   headers: {
     'Content-Type': 'application/json',
   },
